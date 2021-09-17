@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    tools:context=".info.CekPajakActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="105dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/lyHeader"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:src="@drawable/polri"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/sumbar"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/jasaraharja"/>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lyHeader"
+        android:id="@+id/txt"
+        android:text="INFORMASI PAJAK KENDARAAN BERMOTOR"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt"
+        android:id="@+id/txt2"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:textSize="18sp"
+        android:text="NO.REGISTRASI/NO.POLISI"
+        />
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/txt2"
+        android:layout_marginTop="1dp"
+        android:background="@color/black"
+        android:id="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:boxStrokeColor="@color/teal_200"
+        android:id="@+id/plat"
+        app:boxBackgroundColor="@color/teal_200"
+        android:layout_below="@+id/view">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nomor"
+            android:layout_marginTop="30dp"
+            android:hint="Masukkan Plat Nomor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <Button
+        android:id="@+id/btnproses"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/plat"
+        android:background="@drawable/stylebutton"
+        android:text="Proses"/>
+
+</RelativeLayout>

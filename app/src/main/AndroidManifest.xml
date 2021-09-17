@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.esamsat">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_apk"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.Esamsat">
+        <activity android:name=".info.Peraturan.PeraturanpajakActivity"
+            android:label="Peraturan Pajak"></activity>
+        <activity android:name=".info.Pembayaran.PembayaranActivity"
+            android:label="Cara Pembayaran"/>
+        <activity android:name=".ui.InfoActivity" />
+        <activity android:name=".info.Peraturan.PdfPeraturan" />
+        <activity android:name=".info.Peraturan.DetailPeraturan" />
+        <activity android:name=".info.Peraturan.PeraturanPajak" />
+        <activity android:name=".info.PengaduanMasyarakat" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ui.MapsActivity"
+            android:label="GIS PAYMENT POINT"
+            />
+        <activity
+            android:name=".info.faq.faq"
+            android:label="Layanan FAQ"
+            />
+        <activity
+            android:name=".ui.HomeActivity"
+            android:label="Home"
+            />
+        <activity android:name=".MainActivity"
+
+            />
+        <activity android:name=".info.SamKel.lokasi_samkel"
+            android:label="Lokasi Samsat Keliling"/>
+        <activity android:name=".info.SamKel.Periode"
+            android:label="Periode Samsat Keliling"/>
+        <activity android:name=".info.Pengaduan"
+            android:label="Pengaduan"/>
+        <activity android:name=".info.SamKel.SamsatKeliling"
+            android:label="Samsat Keliling"/>
+        <activity android:name=".info.CekPajakActivity"
+            android:label="Cek Pajak Kendraan"/>
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">Esamsat</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="lat_long_snippet">Lat: %1$.5f, Long: %2$.5f</string>
+    <string name="dropped_pin">Dropped Pin</string>
+    <string name="home">Home</string>
+    <string name="info_layanan">Info Layanan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pengaduan">Pengaduan</string>
+    <string name="info_layanan_samsat">Info Layanan Samsat</string>
+    <string name="jadwal_samkel">Jadwal SamKel</string>
+    <string name="peraturan">Peraturan</string>
+    <string name="mandiri">a.Setor tunai ke teller Bank Mandiri\n
+      b.Melalui ATM Bank Mandiri\n
+        1) Masukkan kartu ATM pada mesin\n
+        2) Lalu pilih bahasa Indonesia\n
+        3) Masukkan PIN ATM lalu pilih menu “Bayar/Beli” \n
+        4) Pilih Multipayment, pada halaman terakhir menu tersebut\n
+        5) Ketik Kode Perusahaan, yaitu 60110 (Samsat Online Nasional), tekan “Benar”\n
+        6) Isi Nomor Bayar, kemudian tekan “Benar”\n
+        7) Selanjutnya, akan muncul konfirmasi data nasabah\n
+        8) Pilih nomor 1 sesuai tagihan yang akan dibayar, kemudian tekan “Ya”\n
+        9) Akan muncul konfirmasi pembayaran, tekan “Ya” untuk melakukan pembayaran\n
+       10) Simpan bukti pembayaran dalam bentuk struk sebagai bukti pembayaran yang sah dari bank Mandiri.
+
+    </string>
+    <string name="layanan_faq">Layanan FAQ</string>
+
+    <string name="BNI">a.Setor tunai ke teller Bank BNI\n
+       b.Melalui ATM Bank BNI\n
+        1) Masukkan kartu ATM pada mesin\n
+        2) Lalu ketikkan PIN Anda Pilih menu “Lain”\n
+        3) Lalu pilih menu “Pembayaran”\n
+        4) Pilih menu “Pajak/Penerimaan Negara”, lalu pilih “e-Samsat”\n
+        5) Ketik 4 digit kode institusi Samsat Online Nasional dan kode pembayaran yang telah didapatkan. Kode institusi Samolnas adalah 1500\n
+        6) Setelah tagihan muncul dan sesuai, Anda dapat melakukan pembayaran\n
+        7) Setelah pembayaran berhasil, simpan bukti transaksi Anda.
+
+    </string>
+    <string name="BRI">a.Setor tunai ke teller Bank BRI\n
+       b.Melalui ATM Bank BRI\n
+         1) Masukkan Kartu ATM, Pilih Bahasa Indonesia, dan input PIN Anda\n
+         2) Pilih menu “Lainnya” Pilih menu “Pembayaran/Pembelian”, lalu pilih “Pajak” dan pilih “e-Samsat”\n
+         3) Pilih kode provinsi sesuai kendaraan Anda Masukkan kode wilayah Masukkan Tanda Nomor Kendaraan Bermotor (yang digunakan hanya nomor polisi dan huruf di belakang nomor polisi)\n
+         4) Lakukan konversi atas huruf di belakang nomor polisi kemudian pilih “Lanjutkan”\n
+         5) Input nomor polisi dan digit angka (hasil konversi huruf di belakang nomor polisi), kemudian pilih “Benar”\n
+         6) Lakukan verifikasi data yang tertera pada layar ATM Link Bank BRI dengan data milik nasabah. Apabila sesuai, pilih “Ya”\n
+         7) Pilih jenis rekening “Rekening Rabungan” Proses pembayaran berhasil\n
+         8) Simpan struk sebagai bukti pembayaran.
+
+    </string>
+    <string name="Permata">
+        a.Setor tunai ke teller Bank Permata\n
+        b.Melalui ATM Bank Permata\n
+          1) Pilih Menu Pembayaran\n
+          2) Pilih Menu Transaksi Lainnya\n
+          3) Pilih Menu Pembayaran Lainnya. Silahkan pilih transaksi Anda.\n
+          4) Pilih Menu Pembayaran Pajak. (Tekan CANCEL jika batal)\n
+          5) Konfirmasi Pembayaran. YA. …\n
+          6) Masukan Kode Pembayaran. BENAR. …\n
+          7) Pilih Samsat Online Nasional. (Tekan CANCEL jika batal) …\n
+          8) Transaksi Selesai.
+    </string>
+
+    <string name="BCA">
+        a.Setor tunai ke teller Bank BCA\n
+        b.Melalui ATM Bank BCA\n
+          1) Datangi mesin ATM BCA terdekat.\n
+          2) Masukkan kartu ATM dan input PIN.\n
+          3) Pilih menu “Transaksi Lain”.\n
+          4) Kemudian pilih “Pembayaran”.\n
+          5) Pilih “MPN/Pajak” lalu pilih “Penerimaan Pajak”.\n
+          6) Setelah itu, masukkan kode e-Billing yang telah kamu dapatkan sebelumnya.\n
+          7) Nanti akan muncul di layar informasi tentang pajak yang kamu bayarkan.\n
+          8) Jika sudah sesuai bisa pilih “Ya”.\
+    </string>
+
+    <string name="Cimb">
+        a.Setor tunai ke teller Bank Cimb Niaga\n
+        b.Melalui ATM Bank Cimb Niaga\n
+          1) Saat di layar pertama, pilih menu PEMBAYARAN\n
+          2) Pilih menu LANJUT\n
+          3) Pilih menu FASILITAS UMUM (PAJAK, PERUSAHAAN AIR)\n
+          4) Pilih menu PENERIMAAN NEGARA\n
+          5) Pilih Jenis Layanan PENERIMAAN NEGARA\n
+          6) Masukkan Kode Billing yang terdiri dari 15 digit\n
+          7) Pilih Rekening Sumber Dana\n
+          8) Klik OK pada tampilan layar konfirmasi pembayaran.
+
+    </string>
+    <string name="nagari">
+        a.Setor tunai ke teller Bank Nagari\n
+        b.Melalui ATM Bank Cimb Niaga\n
+          1) Saat di layar pertama, pilih menu PEMBAYARAN\n
+          2) Pilih menu LANJUT\n
+          3) Pilih menu FASILITAS UMUM (PAJAK, PERUSAHAAN AIR)\n
+          4) Pilih menu PENERIMAAN NEGARA\n
+          5) Pilih Jenis Layanan PENERIMAAN NEGARA\n
+          6) Masukkan Kode Billing yang terdiri dari 15 digit\n
+          7) Pilih Rekening Sumber Dana\n
+          8) Klik OK pada tampilan layar konfirmasi pembayaran.
+
+    </string>
+
+    <string-array name="layanan">
+        <item>Bea Balik Nama (BBN)</item>
+        <item>Pajak Kendraan Bermotor (PKB)</item>
+
+    </string-array>
+
+
+</resources>

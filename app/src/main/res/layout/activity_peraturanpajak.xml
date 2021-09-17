@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:orientation="vertical"
+android:background="@color/white"
+    tools:context=".info.Peraturan.PeraturanpajakActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="0.5dp"
+        android:layout_height="wrap_content"
+        >
+        <View
+            android:id="@+id/view1"
+            android:layout_width="415dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt" />
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Peraturan "
+            android:textColor="#000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="450dp"
+            android:layout_height="1dp"
+            android:layout_below="@id/txt"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt" />
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn1"
+        android:layout_below="@+id/view"
+        android:background="@color/teal_200"
+        android:text="UU REPUBLIK INDONESIA No.22 TAHUN 2009 TENTANG LALU LINTAS DAN ANGKUTAN JALAN"
+       />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn2"
+        android:layout_below="@id/btn1"
+        android:background="@color/teal_200"
+        android:text="PERPRES RI No.5 TAHUN 2015 TENTANG PENYELENGGARAAN SISTEM ADMINISTRASI MANUNGGAL SATU ATAP KENDARAAN BERMOTOR"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn3"
+        android:layout_below="@id/btn2"
+        android:background="@color/teal_200"
+        android:text="UU RI NOMOR 14 TAHUN 2008 "
+      />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn4"
+        android:layout_below="@id/btn3"
+        android:background="@color/teal_200"
+        android:text="PERMEN DAGRI REPUBLIK INDONESIA NOMOR 5 TAHUN 2018 "
+       />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn5"
+        android:layout_below="@id/btn4"
+        android:background="@color/teal_200"
+        android:text="PERATURAN MENTERI DALAM NEGERI REPUBLIK INDONESIA NOMOR 1 TAHUN 2021"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn6"
+        android:layout_below="@id/btn5"
+        android:background="@color/teal_200"
+        android:text="PERATURAN DAERAH PROVINSI SUMBAR NO.1 TAHUN 2021 TENTANG ANGGARAN PENDAPATAN DAN BELANJA DAERAH"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn7"
+        android:layout_below="@id/btn6"
+        android:background="@color/teal_200"
+        android:text="PERATURAN PEMERINTAH REPUBLIK INDONESIA NOMOR 58 TAHUN 2005 TENTANG PENGELOLAAN KEUANGAN DAERAH"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn8"
+        android:layout_below="@id/btn7"
+        android:background="@color/teal_200"
+        android:text="PERATURAN PEMERINTAH REPUBLIK INDONESIA NOMOR 50 TAHUN 2010"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn9"
+        android:layout_below="@id/btn8"
+        android:background="@color/teal_200"
+        android:text="PERATURAN PEMERINTAHAN REPUBLIK INDONESIA NOMOR 60 TAHUN 2016"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn10"
+        android:layout_below="@id/btn9"
+        android:background="@color/teal_200"
+        android:text="PERATURAN PEMERINTAH REPUBLIK INDONESIA NOMOR 22 TAHUN 2014 "
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn11"
+        android:layout_below="@id/btn10"
+        android:background="@color/teal_200"
+        android:text="UNDANG-UNDANG REPUBLIK INDONESIA NOMOR 22 TAHUN 2009 TENTANG LALU LINTAS DAN ANGKUTAN JALAN"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn12"
+        android:layout_below="@id/btn11"
+        android:background="@color/teal_200"
+        android:text="UNDANG-UNDANG REPUBLIK INDONESIA NOMOR 28 TAHUN 2009 TENTANG PAJAK DAERAH DAN RETRIBUSI DAERAH "
+        android:layout_centerHorizontal="true"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/btn13"
+            android:layout_below="@id/btn12"
+            android:background="@color/teal_200"
+            android:text="UNDANG-UNDANG REPUBLIK INDONESIA NOMOR 17 TAHUN 2003 TENTANG KEUANGAN NEGARA"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/btn14"
+            android:layout_below="@id/btn13"
+            android:background="@color/teal_200"
+            android:text="UNDANG-UNDANG REPUBLIK INDONESIA NOMOR 33 TAHUN 2004 TENTANG PERIMBANGAN KEUANGAN ANTARA PEMERINTAH PUSAT DAN PEMERINTAHAN DAERAH"
+            android:layout_centerHorizontal="true"/>
+
+
+
+
+
+
+</RelativeLayout>
+
+
+</ScrollView>
