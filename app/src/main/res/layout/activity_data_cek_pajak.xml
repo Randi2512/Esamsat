@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".info.DataCekPajak">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/teks1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text=" Perhitungan Pajak Kendaraan "
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <TableRow
+            android:layout_marginTop="50dp"
+            android:background="#3CB371">
+
+            <TextView
+
+                android:layout_column="1"
+                android:padding="2dip"
+                android:textStyle="bold"
+                android:text="No Plat"
+                android:layout_marginLeft="4dp"
+                android:textColor="#ffff"
+                android:typeface="serif"/>
+
+            <TextView
+                android:id="@+id/txtnoplat"
+                android:layout_width="284dp"
+                android:background="@color/white"
+                android:gravity="right"
+                android:padding="2dip"
+
+                android:text="Ctrl-O" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="5dp"
+            android:background="#3CB371">
+
+            <TextView
+                android:layout_column="1"
+                android:padding="1dip"
+                android:textStyle="bold"
+                android:text="Tahun"
+                android:textColor="#ffff"
+                android:layout_marginLeft="4dp"
+                android:typeface="serif"/>
+            <TextView
+                android:background="@color/white"
+                android:id="@+id/txttahun"
+                android:text="Ctrl-O"
+                android:gravity="right"
+                android:padding="2dip" />
+        </TableRow>
+        <TableRow android:background="#3CB371"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_column="1"
+                android:textStyle="bold"
+                android:text="Merk"
+                android:textColor="@color/white"
+                android:layout_marginLeft="4dp"
+                android:typeface="serif"/>
+            <TextView
+                android:background="@color/white"
+                android:id="@+id/txtmerk"
+                android:text="Ctrl-O"
+                android:gravity="right"
+                android:padding="2dip" />
+        </TableRow>
+        <TableRow android:background="#3CB371"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_column="1"
+                android:textStyle="bold"
+                android:layout_marginLeft="4dp"
+                android:text="Warna"
+                android:textColor="@color/white"
+                android:typeface="serif"/>
+            <TextView
+                android:id="@+id/txtwarna"
+                android:text="Ctrl-O"
+                android:background="@color/white"
+                android:gravity="right"
+                android:padding="2dip" />
+        </TableRow>
+        <TableRow android:background="#3CB371"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_column="1"
+                android:textStyle="bold"
+                android:text="Berlaku s/d"
+                android:textColor="@color/white"
+                android:layout_marginLeft="4dp"
+                android:typeface="serif"/>
+            <TextView
+                android:id="@+id/txtberlaku"
+                android:text="Ctrl-O"
+                android:background="@color/white"
+                android:gravity="right"
+                android:padding="2dip" />
+        </TableRow>
+        <TableRow android:background="#3CB371"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_column="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="Biaya PKB"
+                android:layout_marginLeft="4dp"
+                android:typeface="serif"/>
+            <TextView
+                android:id="@+id/txtbiaya"
+                android:text="Ctrl-O"
+                android:background="@color/white"
+                android:gravity="right"
+                android:padding="2dip" />
+        </TableRow>
+        <TableRow android:background="	#3CB371"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:textColor="@color/white"
+
+                android:layout_column="1"
+                android:layout_marginLeft="4dp"
+                android:text="Sanksi PKB"
+                android:textStyle="bold"
+                android:typeface="serif" />
+            <TextView
+                android:id="@+id/txtsanksipkb"
+                android:text="Ctrl-O"
+                android:background="@color/white"
+                android:gravity="right"
+                android:padding="2dip" />
+        </TableRow>
+        <TableRow android:background="	#3CB371"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_column="1"
+                android:layout_marginLeft="4dp"
+                android:textStyle="bold"
+                android:text="Biaya SWDKLLJ"
+                android:textColor="@color/white"
+                android:typeface="serif"/>
+            <TextView
+                android:id="@+id/txtbiayaswdkllj"
+                android:text="Ctrl-O"
+                android:gravity="right"
+                android:background="@color/white"
+                android:padding="2dip" />
+        </TableRow>
+        <TableRow android:background="	#3CB371"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_column="1"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginLeft="4dp"
+                android:text="Sanksi SWDKLLJ"
+                android:typeface="serif"/>
+
+            <TextView
+                android:text="Ctrl-O"
+                android:id="@+id/txtsanksiswd"
+                android:gravity="right"
+                android:background="@color/white"
+                android:padding="2dip" />
+        </TableRow>
+        <TableRow android:background="	#3CB371"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_column="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginLeft="4dp"
+                android:text="ADM. TNKB"
+                android:typeface="serif"/>
+            <TextView
+                android:id="@+id/txtadmtn"
+                android:text="Ctrl-O"
+                android:background="@color/white"
+                android:gravity="right"
+                android:padding="2dip" />
+        </TableRow>
+        <TableRow android:background="	#3CB371"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_column="1"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginLeft="4dp"
+                android:text="ADM. STNK"
+                android:typeface="serif"/>
+            <TextView
+                android:id="@+id/txtadmst"
+                android:text="Ctrl-O"
+                android:background="@color/white"
+                android:gravity="right"
+                android:padding="2dip" />
+        </TableRow>
+        <TableRow android:background="#3CB371"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_column="1"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginLeft="4dp"
+                android:text="Total"
+                android:typeface="serif"/>
+
+            <TextView
+                android:id="@+id/txttotal"
+                android:layout_width="212dp"
+                android:layout_marginLeft="4dp"
+                android:background="@color/white"
+                android:gravity="right"
+                android:padding="2dip"
+                android:text="Ctrl-O" />
+        </TableRow>
+
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:text="* Nilai pajak dapat berubah untuk kendaraan modifikasi/rubah bentuk"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:text="* Nilai ADM STNK belum termasuk biaya penggantian STNK dan TNKB"
+            android:textSize="12dp"/>
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:text="* Nilai pokok pajak dapat berubah sesuai perubah nilai jual kendaraan"
+            android:textSize="12dp"/>
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:text="* Belum Termasuk Pajak Progressif"
+            android:textSize="12dp"/>
+
+    </TableLayout>
+</LinearLayout>

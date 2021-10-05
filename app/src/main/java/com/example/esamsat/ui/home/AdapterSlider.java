@@ -1,4 +1,4 @@
-package com.example.esamsat.ui;
+package com.example.esamsat.ui.home;
 
 import android.view.LayoutInflater;
 import android.view.View;

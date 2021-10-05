@@ -1,190 +1,383 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-     android:orientation="vertical"
+
 android:background="@color/white"
     tools:context=".info.Peraturan.PeraturanpajakActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_marginTop="0.5dp"
+        android:id="@+id/rvl"
         android:layout_height="wrap_content"
         >
-        <View
-            android:id="@+id/view1"
-            android:layout_width="415dp"
-            android:layout_height="1dp"
+        <ImageView
+            android:layout_width="424dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="4dp"
-            android:background="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txt" />
+            android:background="@drawable/banner3"
+            android:id="@+id/head"
+            />
 
         <TextView
-            android:id="@+id/txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
+
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"
-            android:fontFamily="sans-serif-black"
-            android:text="Peraturan "
-            android:textColor="#000"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
+            android:layout_below="@id/head"
+            android:gravity="center"
+            android:singleLine="true"
+            android:padding="15dp"
+            android:ellipsize="marquee"
+            android:text="Selamat Datang di Layanan Informasi Peraturan Pajak"
+            android:fontFamily="sans-serif"       android:textColor="#000"
+            android:textSize="20sp"
+            android:id="@+id/txtperaturan"
+            />
         <View
-            android:id="@+id/view"
             android:layout_width="450dp"
-            android:layout_height="1dp"
-            android:layout_below="@id/txt"
+            android:layout_height="2dp"
             android:layout_gravity="center"
-            android:layout_marginTop="12dp"
+            android:layout_below="@id/txtperaturan"
+
             android:background="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txt" />
+            android:id="@+id/view"
+            />
+    </RelativeLayout>
 
 
 
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/btn1"
-        android:layout_below="@+id/view"
-        android:background="@color/teal_200"
-        android:text="UU REPUBLIK INDONESIA No.22 TAHUN 2009 TENTANG LALU LINTAS DAN ANGKUTAN JALAN"
-       />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/btn2"
-        android:layout_below="@id/btn1"
-        android:background="@color/teal_200"
-        android:text="PERPRES RI No.5 TAHUN 2015 TENTANG PENYELENGGARAAN SISTEM ADMINISTRASI MANUNGGAL SATU ATAP KENDARAAN BERMOTOR"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/btn3"
-        android:layout_below="@id/btn2"
-        android:background="@color/teal_200"
-        android:text="UU RI NOMOR 14 TAHUN 2008 "
-      />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/btn4"
-        android:layout_below="@id/btn3"
-        android:background="@color/teal_200"
-        android:text="PERMEN DAGRI REPUBLIK INDONESIA NOMOR 5 TAHUN 2018 "
-       />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/btn5"
-        android:layout_below="@id/btn4"
-        android:background="@color/teal_200"
-        android:text="PERATURAN MENTERI DALAM NEGERI REPUBLIK INDONESIA NOMOR 1 TAHUN 2021"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/btn6"
-        android:layout_below="@id/btn5"
-        android:background="@color/teal_200"
-        android:text="PERATURAN DAERAH PROVINSI SUMBAR NO.1 TAHUN 2021 TENTANG ANGGARAN PENDAPATAN DAN BELANJA DAERAH"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/btn7"
-        android:layout_below="@id/btn6"
-        android:background="@color/teal_200"
-        android:text="PERATURAN PEMERINTAH REPUBLIK INDONESIA NOMOR 58 TAHUN 2005 TENTANG PENGELOLAAN KEUANGAN DAERAH"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/btn8"
-        android:layout_below="@id/btn7"
-        android:background="@color/teal_200"
-        android:text="PERATURAN PEMERINTAH REPUBLIK INDONESIA NOMOR 50 TAHUN 2010"
-        android:layout_centerHorizontal="true"/>
 
-    <Button
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_below="@+id/rvl"
+    android:layout_height="match_parent">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/btn9"
-        android:layout_below="@id/btn8"
-        android:background="@color/teal_200"
-        android:text="PERATURAN PEMERINTAHAN REPUBLIK INDONESIA NOMOR 60 TAHUN 2016"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/btn10"
-        android:layout_below="@id/btn9"
-        android:background="@color/teal_200"
-        android:text="PERATURAN PEMERINTAH REPUBLIK INDONESIA NOMOR 22 TAHUN 2014 "
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/btn11"
-        android:layout_below="@id/btn10"
-        android:background="@color/teal_200"
-        android:text="UNDANG-UNDANG REPUBLIK INDONESIA NOMOR 22 TAHUN 2009 TENTANG LALU LINTAS DAN ANGKUTAN JALAN"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/btn12"
-        android:layout_below="@id/btn11"
-        android:background="@color/teal_200"
-        android:text="UNDANG-UNDANG REPUBLIK INDONESIA NOMOR 28 TAHUN 2009 TENTANG PAJAK DAERAH DAN RETRIBUSI DAERAH "
-        android:layout_centerHorizontal="true"/>
-        <Button
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_gravity="center"
+            app:cardUseCompatPadding="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:id="@+id/btn13"
-            android:layout_below="@id/btn12"
-            android:background="@color/teal_200"
-            android:text="UNDANG-UNDANG REPUBLIK INDONESIA NOMOR 17 TAHUN 2003 TENTANG KEUANGAN NEGARA"
-            android:layout_centerHorizontal="true"/>
-        <Button
+            android:id="@+id/card1"
+            app:cardBackgroundColor="#F8F8FF"
+           >
+
+            <TextView
+                android:id="@+id/info_1"
+                android:textColor="@color/black"
+                android:text="UU REPUBLIK INDONESIA No.22 TAHUN 2009 TENTANG LALU LINTAS DAN ANGKUTAN JALAN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_gravity="center"
+            app:cardUseCompatPadding="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:id="@+id/btn14"
-            android:layout_below="@id/btn13"
-            android:background="@color/teal_200"
-            android:text="UNDANG-UNDANG REPUBLIK INDONESIA NOMOR 33 TAHUN 2004 TENTANG PERIMBANGAN KEUANGAN ANTARA PEMERINTAH PUSAT DAN PEMERINTAHAN DAERAH"
-            android:layout_centerHorizontal="true"/>
+            android:id="@+id/card2"
+            android:layout_below="@+id/card1"
+            app:cardBackgroundColor="#F8F8FF"
+            >
+
+            <TextView
+                android:id="@+id/info_2"
+                android:text="PERPRES RI No.5 TAHUN 2015 TENTANG PENYELENGGARAAN SISTEM ADMINISTRASI MANUNGGAL SATU ATAP KENDARAAN BERMOTOR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_gravity="center"
+            app:cardUseCompatPadding="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card3"
+            android:layout_below="@+id/card2"
+            app:cardBackgroundColor="#F8F8FF"
+          >
+
+            <TextView
+                android:id="@+id/info_3"
+                android:text="UU RI NOMOR 14 TAHUN 2008 TENTANG KETERBUKAAN INFORMASI PUBLIK"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_gravity="center"
+            app:cardUseCompatPadding="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card4"
+            android:layout_below="@+id/card3"
+            app:cardBackgroundColor="	#F8F8FF"
+            >
+
+            <TextView
+                android:id="@+id/info_4"
+                android:text="PERATURAN MENTERI DALAM NEGERI REPUBLIK INDONESIA NOMOR 5 TAHUB 2018"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_gravity="center"
+            app:cardUseCompatPadding="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card5"
+            android:layout_below="@+id/card4"
+            app:cardBackgroundColor="	#F8F8FF"
+           >
+
+            <TextView
+                android:id="@+id/info_5"
+                android:text="PERATURAN MENTERI DALAM NEGERI REPUBLIK INDONESIA NOMOR 1 TAHUN 2021 TENTANG PERHITUNGANVDASAR PENGENAAN PAJAK KENDARAAN BERMOTORDAN BEA BALIK NAMA KENDARAAN BERMOTOR"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_gravity="center"
+            app:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card6"
+            android:layout_below="@+id/card5"
+            app:cardBackgroundColor="	#F8F8FF"
+            card_view:cardCornerRadius="4dp">
+
+            <TextView
+                android:id="@+id/info_6"
+                android:text="PERATURAN DAERAH PROVINSI SUMBAR NO.1 TAHUN 2021 TENTANG ANGGARAN PENDAPATAN DAN BELANJA DAERAH"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            app:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card7"
+            android:layout_below="@+id/card6"
+            app:cardBackgroundColor="	#F8F8FF"
+          >
+
+            <TextView
+                android:id="@+id/info_7"
+                android:text="PERATURAN PEMERINTAH REPUBLIK INDONESIA NOMOR 58 TAHUN 2005 TENTANG PENGELOLAAN KEUANGAN DAERAH"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_gravity="center"
+            app:cardUseCompatPadding="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card8"
+            android:layout_below="@+id/card7"
+            app:cardBackgroundColor="	#F8F8FF"
+          >
+
+            <TextView
+                android:id="@+id/info_8"
+                android:text="PERATURAN PEMERINTAH REPUBLIK INDONESIA NOMOR 50 TAHUN 2010 TENTANG JENIS DAN TARIF ATAS JENIS PENERIMAAN NEGARA BUKAN PAJAK YANG BERLAKU PADA KEPOLISIAN RI"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_gravity="center"
+            app:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card9"
+            android:layout_below="@+id/card8"
+            app:cardBackgroundColor="#F8F8FF"
+            card_view:cardCornerRadius="4dp">
+
+            <TextView
+                android:id="@+id/info_9"
+                android:text="PERATURAN PEMERINTAH REPUBLIK INDONESIA NOMOR 60 TAHUN 2016TENTANG JENIS DAN TARIF ATAS JENIS PENERIAMAAN NEGARA BUKAN PAJAK YANG BERLAKU PADA KEPOLISIAN RI"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            app:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card10"
+            android:layout_below="@+id/card9"
+            app:cardBackgroundColor="#F8F8FF"
+            >
+
+            <TextView
+                android:id="@+id/info_10"
+                android:text="PERATURAN PEMERINTAH REPUBLIK INDONESIA NOMOR 22 TAHUN 2014 TENTANG BARANG KENA PAJAK YANG TERGOLONG MEWAH BERUPA KENDARAAN BERMOTOR YANG DIKENAI PAJAK PENJUALAN ATAS BARANG MEWAH"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            app:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card11"
+            android:layout_below="@+id/card10"
+            app:cardBackgroundColor="#F8F8FF"
+        >
+
+            <TextView
+                android:id="@+id/info_11"
+                android:textColor="@color/black"
+                android:text="UNDANG-UNDANG REPUBLIK INDONESIA NOMOR 22 TAHUN 2009 TENTANG LALU LINTAS DAN ANGKUTAN JALAN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            app:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card12"
+            android:layout_below="@+id/card11"
+            app:cardBackgroundColor="#F8F8FF"
+            >
+
+            <TextView
+                android:id="@+id/info_12"
+                android:text="UNDANG-UNDANG REPUBLIK INDONESIA NOMOR 28 TAHUN 2009 TENTANG PAJAK DAERAH DAN RETRIBUSI DAERA"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"/>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            app:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card13"
+            android:layout_below="@+id/card12"
+            app:cardBackgroundColor="#F8F8FF"
+            card_view:cardCornerRadius="4dp">
+
+            <TextView
+                android:id="@+id/info_13"
+                android:text="UNDANG-UNDANG REPUBLIK INDONESIA NOMOR 17 TAHUN 2003 TENTANG KEUANGAN NEGARA"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"/>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="3dp"
+            android:layout_gravity="center"
+            app:cardUseCompatPadding="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card14"
+            android:layout_below="@+id/card13"
+            app:cardBackgroundColor="#F8F8FF"
+           >
+
+            <TextView
+                android:id="@+id/info_14"
+
+                android:text="UUNDANG-UNDANG REPUBLIK INDONESIA NOMOR 33 TAHUN 2004 TENTANG PERIMBANGAN KEUANGAN ANTARA PEMERINTAH PUSAT DAN PEMERINTAHAN DAERAH"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"/>
+
+        </androidx.cardview.widget.CardView>
 
 
 
 
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
 
 
 </RelativeLayout>
 
 
-</ScrollView>

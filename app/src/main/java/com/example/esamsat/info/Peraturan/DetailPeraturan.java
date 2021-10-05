@@ -18,7 +18,7 @@ public class DetailPeraturan extends AppCompatActivity {
 
     TextView txtisi;
     Button btnPdf;
-    @SuppressLint("SetTextI18n")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

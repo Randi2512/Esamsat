@@ -4,16 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".info.SamKel.Periode">
-
-
+    tools:context=".info.SamKel.PERIODE.Periode">
 
 
     <ImageView
         android:layout_width="424dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/head"
+        android:background="@drawable/banner3"
         android:id="@+id/head"
         />
 
@@ -49,9 +47,9 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="0dp"
             tools:listitem="@layout/list_periode"
-            android:id="@+id/rv_data" />
+            android:id="@+id/rv_data1" />
     </ScrollView>
 
 

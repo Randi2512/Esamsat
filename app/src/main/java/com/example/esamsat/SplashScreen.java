@@ -6,9 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.esamsat.info.CekPajakActivity;
-import com.example.esamsat.ui.HomeActivity;
-import com.example.esamsat.ui.InfoActivity;
+import com.example.esamsat.ui.home.HomeActivity;
 
 public class SplashScreen extends AppCompatActivity {
     Handler handler;

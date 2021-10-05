@@ -7,7 +7,7 @@
          location permissions for the "MyLocation" functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,12 +15,18 @@
         android:icon="@drawable/logo_apk"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Esamsat">
-        <activity android:name=".info.Peraturan.PeraturanpajakActivity"
-            android:label="Peraturan Pajak"></activity>
-        <activity android:name=".info.Pembayaran.PembayaranActivity"
-            android:label="Cara Pembayaran"/>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.SamkelToday"></activity>
+        <activity android:name=".info.DataCekPajak" />
+        <activity android:name=".TentangAplikasi.Panduan" />
+        <activity android:name=".TentangAplikasi.LayananSamsat" />
+        <activity
+            android:name=".info.Peraturan.PeraturanpajakActivity"
+            android:label="Peraturan Pajak" />
+        <activity
+            android:name=".info.Pembayaran.PembayaranActivity"
+            android:label="Cara Pembayaran" />
         <activity android:name=".ui.InfoActivity" />
         <activity android:name=".info.Peraturan.PdfPeraturan" />
         <activity android:name=".info.Peraturan.DetailPeraturan" />
@@ -40,29 +46,29 @@
 
         <activity
             android:name=".ui.MapsActivity"
-            android:label="GIS PAYMENT POINT"
-            />
+            android:label="GIS PAYMENT POINT" />
         <activity
             android:name=".info.faq.faq"
-            android:label="Layanan FAQ"
-            />
+            android:label="Layanan FAQ" />
         <activity
-            android:name=".ui.HomeActivity"
-            android:label="Home"
-            />
-        <activity android:name=".MainActivity"
-
-            />
-        <activity android:name=".info.SamKel.lokasi_samkel"
-            android:label="Lokasi Samsat Keliling"/>
-        <activity android:name=".info.SamKel.Periode"
-            android:label="Periode Samsat Keliling"/>
-        <activity android:name=".info.Pengaduan"
-            android:label="Pengaduan"/>
-        <activity android:name=".info.SamKel.SamsatKeliling"
-            android:label="Samsat Keliling"/>
-        <activity android:name=".info.CekPajakActivity"
-            android:label="Cek Pajak Kendraan"/>
+            android:name=".ui.home.HomeActivity"
+            android:label="Home" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".info.SamKel.lokasi_samkel"
+            android:label="Lokasi Samsat Keliling" />
+        <activity
+            android:name=".info.SamKel.PERIODE.Periode"
+            android:label="Periode Samsat Keliling" />
+        <activity
+            android:name=".info.Pengaduan"
+            android:label="Pengaduan" />
+        <activity
+            android:name=".info.SamKel.UPTD.SamsatKeliling"
+            android:label="Samsat Keliling" />
+        <activity
+            android:name=".info.CekPajakActivity"
+            android:label="Cek Pajak Kendraan" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

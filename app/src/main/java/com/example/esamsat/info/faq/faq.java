@@ -101,11 +101,11 @@ public class faq extends Activity {
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
-        listDataHeader.add("Apa saja Dokumen yang harus dilengkapi untuk melakukan BBN Sepeda Motor ?");
+        listDataHeader.add("E-Samsat itu apa?");
         listDataHeader.add("Bagaimana cara mengurus pelepasan blokir pada STNK ?");
-        listDataHeader.add("");
-        listDataHeader.add("Bagaimana cara memblokir STNK kendaraan yang telah di jual  ?");
-        listDataHeader.add("Bagaimana Cara cabut berkas di padang untuk kendaraan roda dua syaratnya apa saja");
+        listDataHeader.add("Apa saja Dokumen yang harus dilengkapi untuk melakukan BBN Sepeda Motor ?");
+        listDataHeader.add(" Bisakah membayar pajak motor tanpa KTP pemilik ?");
+        listDataHeader.add("Bisa");
         listDataHeader.add("Berapa biaya mutasi motor antar kota, dalam 1 propinsi yaitu, dari kota padang ke kota Solok? Berapa juga biaya baliknama untuk motor");
         listDataHeader.add("Bagaimana cara memblokir STNK kendaraan yang telah di jual  ?");
         listDataHeader.add("Bagaimana Cara cabut berkas di padang untuk kendaraan roda dua syaratnya apa saja");
@@ -117,25 +117,25 @@ public class faq extends Activity {
 
         // Adding child data
         List<String> faq1 = new ArrayList<String>();
-        faq1.add("Berikut adalah syarat  mengenai cara balik nama sepeda motor,  \n" +
-                "1.STNK asli dan fotokopi \n" +
-                "2.KTP pemilik baru asli dan fotokopi \n" +
-                "3.BPKB asli dan fotokopi \n" +
-                "4.Kwitansi pembelian dengan materai Rp 10.000 \n" +
-                "5.Faktur asli dan fotokopi.");
+        faq1.add("E-Samsat Adalah layanan pengesahan STNK tahunan dan pembayaran Pajak Kendaraan Bermotor serta SWDKLLJ ( Jasa Raharja ) melalui e-Channel Bank yaitu : ATM, Teller, PPOB, Mobil Banking dan Internet Banking");
 
         List<String> faq2 = new ArrayList<String>();
         faq2.add("Kalau status terblokir, Silahkan datangi kantor samsat sesuai domisili , pergi ke bagian Penagihan dan jangan lupa bawa KTP asli atas nama di STNK untuk melakukan pelepasan blokirnya");
 
 
         List<String> faq3 = new ArrayList<String>();
-        faq3.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");
+        faq3.add("Berikut adalah syarat  mengenai cara balik nama sepeda motor, \n" +
+                "1.STNK asli dan fotokopi \n" +
+                "2.KTP pemilik baru asli dan fotokopi \n" +
+                "3.BPKB asli dan fotokopi \n" +
+                "4.Kwitansi pembelian dengan materai Rp 10.000 \n" +
+                "5.Faktur asli dan fotokopi");
 
         List<String> faq4 = new ArrayList<String>();
-        faq4.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");
+        faq4.add("Dengan demikian, proses bayar pajak motor bisa tanpa KTP asli. Pembayaran hanya butuh data NIK dan alamat KTP saja.");
 
         List<String> faq5 = new ArrayList<String>();
-        faq5.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");
+        faq5.add("");
 
         List<String> faq6 = new ArrayList<String>();
         faq6.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");

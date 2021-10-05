@@ -1,17 +1,19 @@
 package com.example.esamsat.info.Peraturan;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.esamsat.R;
 
 public class PeraturanpajakActivity extends AppCompatActivity {
-    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14;
+    CardView btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,20 +21,23 @@ public class PeraturanpajakActivity extends AppCompatActivity {
 
 
 
-        btn1 =  findViewById(R.id.btn1);
-        btn2 = findViewById(R.id.btn2);
-        btn3 = findViewById(R.id.btn3);
-        btn4 = findViewById(R.id.btn4);
-        btn5 = findViewById(R.id.btn5);
-        btn6 = findViewById(R.id.btn6);
-        btn7 = findViewById(R.id.btn7);
-        btn8 = findViewById(R.id.btn8);
-        btn9 = findViewById(R.id.btn9);
-        btn10 = findViewById(R.id.btn10);
-        btn11 = findViewById(R.id.btn11);
-        btn12 = findViewById(R.id.btn12);
-        btn13 = findViewById(R.id.btn13);
-        btn14 = findViewById(R.id.btn14);
+        btn1 =  findViewById(R.id.card1);
+        btn2 = findViewById(R.id.card2);
+        btn3 = findViewById(R.id.card3);
+        btn4 = findViewById(R.id.card4);
+        btn5 = findViewById(R.id.card5);
+        btn6 = findViewById(R.id.card6);
+        btn7 = findViewById(R.id.card7);
+        btn8 = findViewById(R.id.card8);
+        btn9 = findViewById(R.id.card9);
+        btn10 = findViewById(R.id.card10);
+        btn11 = findViewById(R.id.card11);
+        btn12 = findViewById(R.id.card12);
+        btn13 = findViewById(R.id.card13);
+        btn14 = findViewById(R.id.card14);
+
+        TextView marque1 = (TextView) this.findViewById(R.id.txtperaturan);
+        marque1.setSelected(true);
 
 
 

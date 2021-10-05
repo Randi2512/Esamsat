@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.example.esamsat.R;
 
@@ -25,10 +26,14 @@ public class PembayaranActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pembayaran);
 
+        TextView marque1 = (TextView) this.findViewById(R.id.txtbayar);
+        marque1.setSelected(true);
         recyclerView = findViewById(R.id.rv_pembayaran);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         pembayaranArrayList = new ArrayList<>();
+
+
 
         heading = new String[]{
                 "BANK BNI",
@@ -59,9 +64,9 @@ public class PembayaranActivity extends AppCompatActivity {
                 R.drawable.bni,
                 R.drawable.mandiri,
                 R.drawable.bri,
-                R.drawable.bankpermata,
-                R.drawable.bankbca,
-                R.drawable.cimbniaga,
+                R.drawable.permata,
+                R.drawable.bca,
+                R.drawable.cimb,
                 R.drawable.banknagari
 
 

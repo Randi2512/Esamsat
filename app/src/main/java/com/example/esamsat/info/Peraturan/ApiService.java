@@ -4,7 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiService {
-    private static String BASE_URL = "https://192.168.13.27/Esamsat/";
+    private static String BASE_URL = "http://192.168.43.225/Esamsat/";
     private static Retrofit retrofit ;
     public static Api endpoint(){
 

@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".info.SamKel.lokasi_samkel">
-    
+
 
 
     <ImageView
         android:layout_width="424dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/head"
+        android:background="@drawable/banner3"
         android:id="@+id/head"
         />
 

@@ -4,29 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".info.SamKel.SamsatKeliling">
-
-
-
+    tools:context=".info.SamKel.UPTD.SamsatKeliling">
 
     <ImageView
         android:layout_width="424dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/head"
+        android:background="@drawable/banner3"
         android:id="@+id/head"
         />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/head"
-        android:text="JADWAL SAMSAT KELILING"
+        android:text="Layanan Jadwal Samsat Keliling"
         android:fontFamily="sans-serif-black"
         android:textColor="#000"
+        android:ellipsize="marquee"
         android:textSize="20sp"
         android:id="@+id/txt"
         />
@@ -50,9 +49,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+
             tools:listitem="@layout/list_jadwal"
-            android:onClick="click"
-            android:id="@+id/rv_data" />
+               android:id="@+id/rv_data"
+            tools:ignore="OnClick" />
     </ScrollView>
 
 

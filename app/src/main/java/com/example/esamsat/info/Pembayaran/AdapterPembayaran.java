@@ -1,9 +1,11 @@
 package com.example.esamsat.info.Pembayaran;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -56,6 +58,7 @@ public class AdapterPembayaran extends RecyclerView.Adapter<AdapterPembayaran.My
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView tvHeading;
+        ImageView Imagerow;
         TextView detail;
         ShapeableImageView titleImage;
         ConstraintLayout constraintLayout;
@@ -66,7 +69,7 @@ public class AdapterPembayaran extends RecyclerView.Adapter<AdapterPembayaran.My
             titleImage = itemView.findViewById(R.id.titleimg);
             detail = itemView.findViewById(R.id.detail);
             constraintLayout = itemView.findViewById(R.id.expanded_layout);
-
+            Imagerow =itemView.findViewById(R.id.imageRow);
             tvHeading.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -75,6 +78,16 @@ public class AdapterPembayaran extends RecyclerView.Adapter<AdapterPembayaran.My
                     notifyItemChanged(getAdapterPosition());
                 }
             });
+
+            Imagerow.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    pembayaran pembayaran = pembayaranArrayList.get(getAdapterPosition());
+                    pembayaran.setVisibility(!pembayaran.isVisibility());
+                    notifyItemChanged(getAdapterPosition());
+                }
+            });
+
 
         }
 

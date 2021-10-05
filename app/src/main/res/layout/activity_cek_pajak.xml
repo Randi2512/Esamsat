@@ -6,37 +6,23 @@
     android:layout_height="match_parent"
     android:background="#eee"
     tools:context=".info.CekPajakActivity">
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="105dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/lyHeader"
-        android:layout_marginTop="60dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="100dp"
-            android:src="@drawable/polri"/>
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/sumbar"/>
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/jasaraharja"/>
-
-    </LinearLayout>
+    <ImageView
+        android:layout_width="424dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/banner3"
+        android:id="@+id/head"
+        />
 
 
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lyHeader"
+        android:layout_below="@id/head"
         android:id="@+id/txt"
+        android:layout_marginTop="80dp"
+        android:background="#66CDAA"
         android:text="INFORMASI PAJAK KENDARAAN BERMOTOR"
         android:textSize="25sp"/>
 
@@ -45,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txt"
         android:id="@+id/txt2"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:textColor="@color/black"
         android:fontFamily="sans-serif-black"
@@ -64,25 +50,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="350dp"
+    <EditText
+        android:id="@+id/edtNopol"
+        style="@style/MyEditTextStyle"
         android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:boxStrokeColor="@color/teal_200"
-        android:id="@+id/plat"
-        app:boxBackgroundColor="@color/teal_200"
-        android:layout_below="@+id/view">
+        android:layout_marginTop="15dp"
+        android:hint="MASUKKAN NOPOL"
+        android:layout_below="@+id/view"
+        android:inputType="text"
+        android:textColor="#000" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/nomor"
-            android:layout_marginTop="30dp"
-            android:hint="Masukkan Plat Nomor" />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
 
 
@@ -93,8 +72,9 @@
         android:layout_marginBottom="8dp"
         android:layout_marginTop="20dp"
         android:textSize="20sp"
+        android:shadowRadius="@integer/material_motion_duration_long_2"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/plat"
+        android:layout_below="@+id/edtNopol"
         android:background="@drawable/stylebutton"
         android:text="Proses"/>
 

@@ -4,10 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.HomeActivity">
+    tools:context=".ui.home.HomeActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:id="@+id/rvhead"
+
+    android:layout_height="700dp">
     <androidx.cardview.widget.CardView
         app:cardCornerRadius="6dp"
+        android:id="@+id/cardSlide"
         android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -15,10 +24,309 @@
         <com.smarteist.autoimageslider.SliderView
             android:id="@+id/slider"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="275dp"
             app:sliderIndicatorUnselectedColor="@color/blue"
             app:sliderIndicatorSelectedColor="@color/black"/>
     </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/cardSlide"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:id="@+id/txApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-Samsat Information"
+                android:textColor="#000"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:id="@+id/sliding_text_marquee"
+                android:singleLine="true"
+                android:textColor="	#1E90FF"
+                android:ellipsize="marquee"
+                android:text="Selamat Datang di Aplikasi Mobile E-Samsat Sumbar "
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="5dp"
+                            android:elevation="3dp"
+                            app:cardBackgroundColor="#fff"
+                            app:cardCornerRadius="15dp">
+
+                            <ImageView
+                                android:id="@+id/img1"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/browse" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="4dp"
+                            android:text="Cek Pajak\nKendaraan"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="5dp"
+                            android:elevation="3dp"
+                            app:cardBackgroundColor="#fff"
+                            app:cardCornerRadius="15dp">
+
+                            <ImageView
+                                android:id="@+id/img2"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/car" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center_horizontal"
+                            android:text="Jadwal Samsat\nKeliling"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="5dp"
+                            android:elevation="3dp"
+                            app:cardBackgroundColor="#fff"
+                            app:cardCornerRadius="15dp">
+
+                            <ImageView
+                                android:id="@+id/img3"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/atm" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center_horizontal"
+                            android:text="Cara Pembayaran\nPajak"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="5dp"
+                            android:elevation="3dp"
+                            app:cardBackgroundColor="#fff"
+                            app:cardCornerRadius="15dp">
+
+                            <ImageView
+                                android:id="@+id/img4"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/pengaduan" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="4dp"
+                            android:text="Pengaduan\nMasyarakat"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                   android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="5dp"
+                            android:elevation="3dp"
+                            app:cardBackgroundColor="#fff"
+                            app:cardCornerRadius="15dp">
+
+                            <ImageView
+                                android:id="@+id/img5"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/peraturan" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center_horizontal"
+                            android:text="Peraturan Pajak"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="5dp"
+                            android:elevation="3dp"
+                            app:cardBackgroundColor="#fff"
+                            app:cardCornerRadius="15dp">
+
+                            <ImageView
+                                android:id="@+id/img6"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/qna" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="4dp"
+                            android:text="FAQ"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent">
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
@@ -33,9 +341,9 @@
         app:menu="@menu/menu_nav"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="16dp"
         android:elevation="8dp"
         app:labelVisibilityMode="unlabeled"
         app:itemIconTint="@drawable/nav_color_selector"/>
+</RelativeLayout>
 
 </RelativeLayout>
