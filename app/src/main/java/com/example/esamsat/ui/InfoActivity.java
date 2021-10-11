@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import com.example.esamsat.R;
 import com.example.esamsat.TentangAplikasi.LayananSamsat;
 import com.example.esamsat.TentangAplikasi.Panduan;
+import com.example.esamsat.ui.GIS.MapsActivity;
+import com.example.esamsat.ui.MONITOR.Monitoring;
+import com.example.esamsat.ui.SamkelToday.SamkelToday;
 import com.example.esamsat.ui.home.HomeActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -62,9 +65,23 @@ public class InfoActivity extends AppCompatActivity {
                                                         , HomeActivity.class));
                                                 overridePendingTransition(0,0);
                                                 return true;
-                                        case R.id.info:
 
+                                        case R.id.Samkel:
+                                                startActivity(new Intent(getApplicationContext()
+                                                        , SamkelToday.class));
+                                                overridePendingTransition(0,0);
                                                 return true;
+
+                                        case R.id.info:
+                                                return true;
+
+                                        case R.id.monitoring:
+                                                startActivity(new Intent(getApplicationContext()
+                                                        , Monitoring.class));
+                                                overridePendingTransition(0,0);
+                                                return true;
+
+
                                         case R.id.lokasi:
                                                 startActivity(new Intent(getApplicationContext()
                                                         , MapsActivity.class));

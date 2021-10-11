@@ -7,19 +7,24 @@
         android:icon="@drawable/homepage"/>
     <item
         android:id="@+id/Samkel"
-        android:title="Samsat keliling"
-        android:icon="@drawable/samkel"/>
+        android:title="SamKel Hari ini"
+        android:icon="@drawable/calender3"/>
     <item
         android:id="@+id/info"
         android:title="@string/info_layanan"
         android:icon="@drawable/more_info"/>
-   
+
+
+    <item
+        android:id="@+id/monitoring"
+        android:title="Monitoring"
+        android:icon="@drawable/monitoring"/>
 
 
     <item
         android:id="@+id/lokasi"
         android:title="GIS Payment"
-        android:icon="@drawable/gmaps"/>
+        android:icon="@drawable/mapss"/>
 
 
 

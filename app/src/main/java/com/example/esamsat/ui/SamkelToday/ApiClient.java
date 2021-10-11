@@ -1,4 +1,4 @@
-package com.example.esamsat.info.SamKel.UPTD;
+package com.example.esamsat.ui.SamkelToday;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

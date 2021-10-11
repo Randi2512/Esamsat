@@ -21,8 +21,9 @@ import com.example.esamsat.info.Peraturan.PeraturanpajakActivity;
 import com.example.esamsat.info.SamKel.UPTD.SamsatKeliling;
 import com.example.esamsat.info.faq.faq;
 import com.example.esamsat.ui.InfoActivity;
-import com.example.esamsat.ui.MapsActivity;
-import com.example.esamsat.ui.SamkelToday;
+import com.example.esamsat.ui.GIS.MapsActivity;
+import com.example.esamsat.ui.MONITOR.Monitoring;
+import com.example.esamsat.ui.SamkelToday.SamkelToday;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
@@ -94,7 +95,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        img3.setOnClickListener(new View.OnClickListener() {
+        img3.setOnClickListener(new View.OnClickListener() {    
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, PembayaranActivity.class);
@@ -149,6 +150,13 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.info:
                         startActivity(new Intent(getApplicationContext()
                                 , InfoActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+
+                    case R.id.monitoring:
+                        startActivity(new Intent(getApplicationContext()
+                                , Monitoring.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.lokasi:
