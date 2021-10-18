@@ -15,10 +15,6 @@
         android:icon="@drawable/more_info"/>
 
 
-    <item
-        android:id="@+id/monitoring"
-        android:title="Monitoring"
-        android:icon="@drawable/monitoring"/>
 
 
     <item

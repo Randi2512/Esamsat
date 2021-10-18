@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.esamsat.R;
+import com.example.esamsat.api.Api;
+import com.example.esamsat.api.ApiService;
 import com.example.esamsat.ui.GIS.MapsActivity;
 import com.example.esamsat.ui.InfoActivity;
 import com.example.esamsat.ui.MONITOR.Monitoring;
@@ -67,11 +69,7 @@ private Api api;
                         return true;
 
 
-                    case R.id.monitoring:
-                        startActivity(new Intent(getApplicationContext()
-                                , Monitoring.class));
-                        overridePendingTransition(0,0);
-                        return true;
+
                     case R.id.lokasi:
                         startActivity(new Intent(getApplicationContext()
                                 , MapsActivity.class));
@@ -92,7 +90,7 @@ private Api api;
 
     private void fetchData(String type, String key) {
         adapterSToday = new AdapterSToday(new ArrayList<>());
-        api = ApiClient.getApiClient().create(Api.class);
+        api = ApiService.endpoint();
         Call<samkel_Today> call = api.getsamkel_Today();
         call.enqueue(new Callback<samkel_Today>() {
             @Override

@@ -1,29 +1,41 @@
 package com.example.esamsat.info;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.content.Context;
- import android.widget.Toast;
+import android.widget.Toast;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+
 import com.example.esamsat.R;
+import com.example.esamsat.api.Api;
+import com.example.esamsat.api.ApiService;
+
+import retrofit2.Call;
+import retrofit2.Callback;
 
 public class CekPajakActivity extends AppCompatActivity {
-    final String URL_SIGNIN = "https://192.168.13.64/cekpajak.php";
+    final String URL_SIGNIN = "https://192.168.13.47/cekpajak.php";
     Button btnproses;
     Context context;
     EditText nopol;
@@ -32,6 +44,7 @@ public class CekPajakActivity extends AppCompatActivity {
     RequestQueue requestQueue;
     ArrayList<HashMap<String, String>> list_data;
     private StringRequest stringRequest;
+    private Api api;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +58,7 @@ public class CekPajakActivity extends AppCompatActivity {
 
     private void addProsesAction() {
         btnproses = (Button) findViewById(R.id.btnproses);
-        requestQueue = Volley.newRequestQueue(CekPajakActivity.this);
+
 
         list_data = new ArrayList<HashMap<String, String>>();
 
@@ -54,39 +67,50 @@ public class CekPajakActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String no = nopol.getText().toString();
 
+                api = ApiService.endpoint();
+
+                Call<GetPkbResponse> call = api.getDataPkb(no);
+                call.enqueue(new Callback<GetPkbResponse>() {
+                    @Override
+                    public void onResponse(Call<GetPkbResponse> call, retrofit2.Response<GetPkbResponse> response) {
+                        Log.d("Response::", response.body().result.toString());
+
+                        Intent intent = new Intent(getApplicationContext(),DataCekPajak.class);
+                        intent.putExtra("NoKendaraan",response.body().result.get(0).noKendaraan );
+                        intent.putExtra("TahunKendaraan",response.body().result.get(0).tahunKendaraan);
+                        intent.putExtra("MerkKendaraan",response.body().result.get(0).merkKendaraan);
+                        intent.putExtra("WarnaKendaraan",response.body().result.get(0).tipeKendaraan );
+                        intent.putExtra("TglPajak",response.body().result.get(0).tglPajak);
+                        intent.putExtra("TglStnk",response.body().result.get(0).tglStnk );
+                        intent.putExtra("Status",response.body().result.get(0).status );
+                        intent.putExtra("BiayaPKB",response.body().result.get(0).biayaPKB );
+                        intent.putExtra("SanksiPKB",response.body().result.get(0).sanksiPKB );
+                        intent.putExtra("BiayaSwdkllj",response.body().result.get(0).biayaSwdkllj );
+                        intent.putExtra("SanksiSwdkllj",response.body().result.get(0).sanksiSwdkllj );
+                        intent.putExtra("ADMTnkb",response.body().result.get(0).aDMTnkb );
+                        intent.putExtra("ADMStnk",response.body().result.get(0).aDMStnk);
+
+                        startActivity(intent);
 
 
-                for (int i = 0; i < list_data.size(); i++) {
-                    String kendaraan = list_data.get(i).get("NoKendaraan");
-                    if (no.equals(kendaraan)) {
-                        cek = i;
-                        break;
+
                     }
-                }
-                idkendaraan = list_data.get(cek).get("NoKendaraan");
-                if (no.equals(idkendaraan)){
-                    Intent intent = new Intent(CekPajakActivity.this, DataCekPajak.class);
-                    intent.putExtra("NoKendaraan",list_data.get(cek).get("NoKendaraan"));
-                    intent.putExtra("MerkKendaraan",list_data.get(cek).get("MerkKendaraan"));
-                    intent.putExtra("TipeKendaraan",list_data.get(cek).get("TipeKendaraan"));
-                    intent.putExtra("WarnaKendaraan",list_data.get(cek).get("WarnaKendaraan"));
-                    intent.putExtra("MerkKendaraan",list_data.get(cek).get("MerkKendaraan"));
-                    intent.putExtra("TglPajak",list_data.get(cek).get("TglPajak"));
-                    intent.putExtra("Status",list_data.get(cek).get("Status"));
-                    intent.putExtra("BiayaPKB",list_data.get(cek).get("BiayaPKB"));
-                    intent.putExtra("SanksiPKB",list_data.get(cek).get("SanksiPKB"));
-                    intent.putExtra("BiayaSwdkljj",list_data.get(cek).get("BiayaSwdkljj"));
-                    intent.putExtra("SanksiSwdkljj",list_data.get(cek).get("SanksiSwdkljj"));
-                    intent.putExtra("ADMTnkb",list_data.get(cek).get("ADMTnkb"));
-                    intent.putExtra("ADMStnk",list_data.get(cek).get("ADMStnk"));
 
-                    Toast.makeText(CekPajakActivity.this,"Proses Sukses",Toast.LENGTH_LONG).show();
-                    startActivity(intent);
-                    ClearText();
-
-                }else{
-                    Toast.makeText(CekPajakActivity.this,"Proses Gagal\n Please Try Again!!",Toast.LENGTH_LONG).show();
-                }
+                    @Override
+                    public void onFailure(Call<GetPkbResponse> call, Throwable t) {
+                        AlertDialog.Builder builder1 = new AlertDialog.Builder(context);
+                        builder1.setTitle("Error")
+                                .setMessage("Data tidak ditemukan")
+                                .setNegativeButton("tutup", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        dialogInterface.dismiss();
+                                    }
+                                });
+                        AlertDialog alert11 = builder1.create();
+                        alert11.show();
+                    }
+                });
 
             }
         });

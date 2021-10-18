@@ -104,16 +104,12 @@ public class faq extends Activity {
         listDataHeader.add("E-Samsat itu apa?");
         listDataHeader.add("Bagaimana cara mengurus pelepasan blokir pada STNK ?");
         listDataHeader.add("Apa saja Dokumen yang harus dilengkapi untuk melakukan BBN Sepeda Motor ?");
-        listDataHeader.add(" Bisakah membayar pajak motor tanpa KTP pemilik ?");
-        listDataHeader.add("Bisa");
-        listDataHeader.add("Berapa biaya mutasi motor antar kota, dalam 1 propinsi yaitu, dari kota padang ke kota Solok? Berapa juga biaya baliknama untuk motor");
+        listDataHeader.add("Bisakah membayar pajak motor tanpa KTP pemilik ?");
+        listDataHeader.add("Berapa biaya mutasi motor antar kota, dalam 1 propinsi yaitu, dari kota padang ke kota Solok? Dan berapa biaya balik nama untuk motor");
         listDataHeader.add("Bagaimana cara memblokir STNK kendaraan yang telah di jual  ?");
-        listDataHeader.add("Bagaimana Cara cabut berkas di padang untuk kendaraan roda dua syaratnya apa saja");
-        listDataHeader.add("Berapa biaya mutasi motor antar kota, dalam 1 propinsi yaitu, dari kota padang ke kota Solok? Berapa juga biaya baliknama untuk motor");
-        listDataHeader.add("Berapa biaya mutasi motor antar kota, dalam 1 propinsi yaitu, dari kota padang ke kota Solok? Berapa juga biaya baliknama untuk motor");
-        listDataHeader.add("Bagaimana cara memblokir STNK kendaraan yang telah di jual  ?");
-        listDataHeader.add("Bagaimana Cara cabut berkas di padang untuk kendaraan roda dua syaratnya apa saja");
-        listDataHeader.add("Berapa biaya mutasi motor antar kota, dalam 1 propinsi yaitu, dari kota padang ke kota Solok? Berapa juga biaya baliknama untuk motor");
+        listDataHeader.add("Bagaimana cara cabut berkas dan syaratnya apa saja");
+        listDataHeader.add("Bagaimana cara mutasi dari Jateng ke Padang (Mutasi Antar Provinsi) ?");
+        listDataHeader.add("saya mau blokir pajak mobil saya yang sudah terjual. Bagaimana prosedurnya Bapak/ Ibu admin. Apakah cara blokirnya bisa secara online. Mohon penjelasannya Bapak/ Ibu admin. Terima Kasih");
 
         // Adding child data
         List<String> faq1 = new ArrayList<String>();
@@ -135,7 +131,13 @@ public class faq extends Activity {
         faq4.add("Dengan demikian, proses bayar pajak motor bisa tanpa KTP asli. Pembayaran hanya butuh data NIK dan alamat KTP saja.");
 
         List<String> faq5 = new ArrayList<String>();
-        faq5.add("");
+        faq5.add("Langkah Balik nama antar kota kabupaten \n " +
+                "1. Cabut file terlebih dahulu - jika kendaraan asalnya kota padang datangi ditlantas sumbar - jika kendaraan asalnya selain kota padang langsung saja ke samsat sesuai kota kabupaten tsb Untuk biaya cabut file kami tidak mengetahui karena ranahnya kepolisian \n" +
+                "2. Setelah cabut file, datangi kantor samsat sesuai domisili di stnk lama untuk cetak fiskal keluar dan bayar pajak jika sudah masuk masa pembayarannya. \n" +
+                "Untuk info besaran pajak bisa di cek di https://dpkd.sumbarprov.go.id/info-pkb.html atau download aplikasi android kami di https://play.google.com/store/apps/details?id=id.go.sumbarprov.bkeuda.esamsatsumbar \n" +
+                "3. Setelah fiskal terbit, datangi kantor ditlantas untuk beli bpkb baru \n" +
+                "4. Setelah bpkb baru terbit kunjungi kantor samsat sesuai domisili barunya untuk membeli stnk dan plat Biaya plat stnk Roda Dua 160.000 Roda Empat 300.000 \n" +
+                "5. Setelah terbit stnk proses selesai Terima kasih");
 
         List<String> faq6 = new ArrayList<String>();
         faq6.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");
@@ -144,29 +146,12 @@ public class faq extends Activity {
         faq7.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");
 
         List<String> faq8 = new ArrayList<String>();
-        faq8.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");
+        faq8.add("langkah awalnya silahkan ibuk cabut berkas/file kendaraan tersebut di samsat asal dalam hal ini provinsi jawa tengah, \n " +
+                "setelah selesai pengurusan pada prov jawa tengah kemudian baru ibu bisa mendaftarkan kendaraan tersebut pada samsat tujuan dalam hal ini (kota Padang)..untuk persyaratannya ibuk dapat menanyakan langsung pada kantor samsat..terimakasih");
 
         List<String> faq9 = new ArrayList<String>();
-        faq9.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");
-
-        List<String> faq10 = new ArrayList<String>();
-        faq10.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");
-
-        List<String> faq11 = new ArrayList<String>();
-        faq11.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");
-
-        List<String> faq12 = new ArrayList<String>();
-        faq12.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");
-
-        List<String> faq13 = new ArrayList<String>();
-        faq13.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");
-
-
-
-
-
-
-
+        faq9.add(" cara untuk melaporkan kendaraan yang sudah terjual, silahkan bapak mengunjungi kantor samsat, dimana kendaraan tersebut terdaftar, \n " +
+                "kemudian bapak akan mengisi form yang telah disediakan pada kantor samsat..mohon maaf bapak saat ini kami belum menyediakan form online untuk pemblokiran tersebut..terimakasih");
 
 
 
@@ -180,11 +165,6 @@ public class faq extends Activity {
         listDataChild.put(listDataHeader.get(6), faq7);
         listDataChild.put(listDataHeader.get(7), faq8);
         listDataChild.put(listDataHeader.get(8), faq9);
-        listDataChild.put(listDataHeader.get(9), faq10);
-        listDataChild.put(listDataHeader.get(10), faq11);
-        listDataChild.put(listDataHeader.get(11), faq12);
-        listDataChild.put(listDataHeader.get(12), faq13);
-
 
 
 

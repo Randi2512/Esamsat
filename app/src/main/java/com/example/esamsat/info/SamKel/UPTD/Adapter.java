@@ -52,6 +52,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             no_telp=itemView.findViewById(R.id.txtNomor);
 
 
+
         }
     }
     public void setData(ArrayList<Result> newlist)

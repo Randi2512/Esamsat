@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.esamsat.R;
+import com.example.esamsat.api.Api;
+import com.example.esamsat.api.ApiService;
 
 
 import java.util.ArrayList;
@@ -43,7 +45,7 @@ public class Periode extends AppCompatActivity {
     private void fetchData(String type, String key) {
 
         adapter = new AdapterPeriode(new ArrayList<>());
-        apiInterface = ApiClient.getApiClient().create(Api.class);
+        apiInterface = ApiService.endpoint();
         Call<periode_Samkel> call = apiInterface.getperiode_Samkel();
         call.enqueue(new Callback<periode_Samkel>() {
             @Override

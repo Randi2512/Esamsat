@@ -57,18 +57,15 @@ public class Monitoring extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monitoring);
         pieChart = findViewById(R.id.pieChart);
-        simpleArcLoader = findViewById(R.id.loader);
-        simpleArcLoader2 = findViewById(R.id.loader2);
+
         tvTanggal = findViewById(R.id.tanggal);
         hasil = formatter.format(tanggal);
         tvTanggal.setText(hasil);
-        tvYa = findViewById(R.id.tvTaat);
-        tvTidak = findViewById(R.id.tvTidakTaat);
-        scrollView = findViewById(R.id.scrollStats);
+
 
         BottomNavigationView bottomNavigationView  = findViewById(R.id.nav_view);
 
-        bottomNavigationView.setSelectedItemId(R.id.monitoring);
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -94,9 +91,8 @@ public class Monitoring extends AppCompatActivity {
                         return true;
 
 
-                    case R.id.monitoring:
 
-                        return true;
+
                     case R.id.lokasi:
                         startActivity(new Intent(getApplicationContext()
                                 , MapsActivity.class));
@@ -110,96 +106,27 @@ public class Monitoring extends AppCompatActivity {
             }
         });
 
-        fetchData();
+        PieChart pieChart = findViewById(R.id.pieChart);
+
+        ArrayList<PieEntry> visitors = new ArrayList<>();
+        visitors.add(new PieEntry(761019, "Taat Pajak"));
+        visitors.add(new PieEntry(253673, "Tidak Taat Pajak"));
 
 
 
 
 
+        PieDataSet pieDataSet = new PieDataSet(visitors, "Masyarakat Sadar Pajak");
+        pieDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+        pieDataSet.setValueTextColor(Color.BLACK);
+        pieDataSet.setValueTextSize(16f);
 
-    }
+        PieData pieData = new PieData(pieDataSet);
 
-    private void fetchData() {
-        String url  = "http://192.168.13.64/Esamsat/monitor.php/";
-
-        simpleArcLoader.start();
-        simpleArcLoader2.start();
-
-        StringRequest request = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-
-                        try {
-                            JSONObject jsonObject = new JSONObject(response.toString());
-
-                            tvYa.setText(jsonObject.getString("keterangan"));
-                            tvTidak.setText(jsonObject.getString("jumlah"));
-
-
-                            yValues.add(new PieEntry(Integer.parseInt(tvYa.getText().toString()), "Taat Pajak"));
-                            yValues.add(new PieEntry(Integer.parseInt(tvTidak.getText().toString()), "Tidak Taat Pajak"));
-
-                            pieChart.getDescription().setEnabled(false);
-                            pieChart.setExtraOffsets(5, 10, 5, 5);
-
-                            pieChart.setDragDecelerationFrictionCoef(0.99f);
-
-                            pieChart.setDrawHoleEnabled(true);
-                            pieChart.setHoleColor(Color.WHITE);
-                            pieChart.setTransparentCircleRadius(61f);
-                            pieChart.setRotationAngle(320);
-
-                            pieChart.animateY(1500, Easing.EaseInOutCubic);
-                            PieDataSet dataSet = new PieDataSet(yValues, "sadarpajak");
-                            dataSet.setSliceSpace(3f);
-                            dataSet.setSelectionShift(5f);
-                            ValueFormatter vf = new ValueFormatter() { //value format here, here is the overridden method
-                                @Override
-                                public String getFormattedValue(float value) {
-                                    return ""+(int)value;
-                                }
-                            };
-                            dataSet.setValueFormatter(vf);
-                            dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
-                            PieData data = new PieData(dataSet);
-                            data.setValueTextSize(10f);
-                            data.setValueTextColor(Color.YELLOW);
-
-                            pieChart.setData(data);
-
-                            simpleArcLoader.stop();
-                            simpleArcLoader2.stop();
-                            simpleArcLoader.setVisibility(View.GONE);
-                            simpleArcLoader2.setVisibility(View.GONE);
-                            scrollView.setVisibility(View.VISIBLE);
-                            pieChart.setVisibility(View.VISIBLE);
-
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            simpleArcLoader.stop();
-                            simpleArcLoader2.stop();
-                            simpleArcLoader.setVisibility(View.GONE);
-                            scrollView.setVisibility(View.VISIBLE);
-                        }
-
-
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                simpleArcLoader.stop();
-                simpleArcLoader.setVisibility(View.GONE);
-                scrollView.setVisibility(View.VISIBLE);
-                Toast.makeText(Monitoring.this, error.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(request);
-
-
+        pieChart.setData(pieData);
+        pieChart.getDescription().setEnabled(false);
+        pieChart.setCenterText(" Data Masyarakat Sadar Pajak/Tidak");
+        pieChart.animate();
 
 
 

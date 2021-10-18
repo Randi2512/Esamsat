@@ -75,11 +75,7 @@ public class InfoActivity extends AppCompatActivity {
                                         case R.id.info:
                                                 return true;
 
-                                        case R.id.monitoring:
-                                                startActivity(new Intent(getApplicationContext()
-                                                        , Monitoring.class));
-                                                overridePendingTransition(0,0);
-                                                return true;
+
 
 
                                         case R.id.lokasi:

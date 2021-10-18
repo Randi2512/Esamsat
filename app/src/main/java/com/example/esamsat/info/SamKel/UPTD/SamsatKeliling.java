@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.esamsat.R;
+import com.example.esamsat.api.Api;
+import com.example.esamsat.api.ApiService;
 import com.example.esamsat.info.SamKel.PERIODE.Periode;
 
 import java.util.ArrayList;
@@ -43,7 +45,7 @@ public class SamsatKeliling extends AppCompatActivity {
     private void fetchData(String type, String key) {
 
         adapter = new Adapter(new ArrayList<>());
-        apiInterface = ApiClient.getApiClient().create(Api.class);
+        apiInterface = ApiService.endpoint();
         Call<Uptd> call = apiInterface.getUptd();
         call.enqueue(new Callback<Uptd>() {
             @Override

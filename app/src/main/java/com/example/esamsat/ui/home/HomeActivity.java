@@ -153,12 +153,6 @@ public class HomeActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
 
-
-                    case R.id.monitoring:
-                        startActivity(new Intent(getApplicationContext()
-                                , Monitoring.class));
-                        overridePendingTransition(0,0);
-                        return true;
                     case R.id.lokasi:
                         startActivity(new Intent(getApplicationContext()
                                 , MapsActivity.class));
