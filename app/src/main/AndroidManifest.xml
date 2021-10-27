@@ -18,7 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.MONITOR.Monitoring"></activity>
+        <activity android:name=".info.SamKel.PERIODE.PeriodeBulan"></activity>
+        <activity android:name=".ui.MONITOR.Monitoring" />
         <activity android:name=".info.SamKel.PERIODE.Periode" />
         <activity android:name=".ui.SamkelToday.SamkelToday" />
         <activity android:name=".info.DataCekPajak" />
@@ -56,7 +57,7 @@
         <activity
             android:name=".info.faq.faq"
             android:label="Layanan FAQ" />
-        <activity
+        <activity 
             android:name=".ui.home.HomeActivity"
             android:label="Home" />
         <activity android:name=".MainActivity" />

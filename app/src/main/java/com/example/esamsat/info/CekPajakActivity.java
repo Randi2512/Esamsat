@@ -1,4 +1,4 @@
-package com.example.esamsat.info;
+ package com.example.esamsat.info;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,7 +35,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 
 public class CekPajakActivity extends AppCompatActivity {
-    final String URL_SIGNIN = "https://192.168.13.47/cekpajak.php";
+    final String URL_SIGNIN = "https://192.168.13.51/getDataPKB.php";
     Button btnproses;
     Context context;
     EditText nopol;
@@ -155,6 +155,7 @@ public class CekPajakActivity extends AppCompatActivity {
 
             }
         }, new Response.ErrorListener() {
+
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(CekPajakActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();

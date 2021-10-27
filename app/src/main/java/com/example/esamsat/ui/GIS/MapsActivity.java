@@ -36,6 +36,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PointOfInterest;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.gson.JsonArray;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -50,6 +51,7 @@ import static android.provider.ContactsContract.CommonDataKinds.Website.URL;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     MapFragment mapFragment;
+
     GoogleMap gMap;
     MarkerOptions markerOptions = new MarkerOptions();
     CameraPosition cameraPosition;
@@ -61,7 +63,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public static final String LAT = "lat";
     public static final String LNG = "lng";
 
-    private String url = "http://192.168.13.47/Esamsat/Marker.php";
+
+    private String url = "http://192.168.13.209/Esamsat/Marker.php";
 
     String tag_json_obj = "json_obj_req";
 
@@ -97,6 +100,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             default:
                 return super.onOptionsItemSelected(item);
         }
+
     }
 
 
@@ -140,6 +144,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     String getObject = jObj.getString("lokasi");
                     JSONArray jsonArray = new JSONArray(getObject);
 
+
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
                         title = jsonObject.getString(TITLE);
@@ -152,6 +157,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 } catch (JSONException e) {
                     // JSON error
                     e.printStackTrace();
+
                 }
 
             }

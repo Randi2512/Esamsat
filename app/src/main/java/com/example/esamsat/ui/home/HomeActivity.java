@@ -42,12 +42,11 @@ public class HomeActivity extends AppCompatActivity {
 
 
         List<Integer> images=new ArrayList<>();
+        images.add(R.drawable.denda);
         images.add(R.drawable.slide1);
         images.add(R.drawable.slide2);
         images.add(R.drawable.slide3);
-        images.add(R.drawable.pajak1);
-        images.add(R.drawable.pajak2);
-        images.add(R.drawable.pajak3);
+
 
         AdapterSlider adapterSlider=new AdapterSlider(images);
         sliderView.setSliderAdapter(adapterSlider);

@@ -14,6 +14,7 @@ import com.example.esamsat.R;
 import com.example.esamsat.api.Api;
 import com.example.esamsat.api.ApiService;
 import com.example.esamsat.info.SamKel.PERIODE.Periode;
+import com.example.esamsat.info.SamKel.PERIODE.PeriodeBulan;
 
 import java.util.ArrayList;
 
@@ -70,7 +71,7 @@ public class SamsatKeliling extends AppCompatActivity {
 
 
     public void onClick(View view) {
-        Intent intent = new Intent(SamsatKeliling.this, Periode.class);
+        Intent intent = new Intent(SamsatKeliling.this, PeriodeBulan.class);
         startActivity(intent);
     }
 }

@@ -105,7 +105,7 @@ private Api api;
             @Override
             public void onFailure(Call<samkel_Today> call, Throwable t) {
                 Log.d("response::", t.toString());
-                Toast.makeText(SamkelToday.this, "Error\n" + t.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(SamkelToday.this, "Tidak Ada SamKel Hari ini", Toast.LENGTH_LONG).show();
             }
         });
     }

@@ -27,6 +27,7 @@ public class DataCekPajak extends AppCompatActivity {
         biayas = (TextView) findViewById(R.id.txtbiayaswdkllj);
         sanksis = (TextView) findViewById(R.id.txtsanksiswd);
         biayas = (TextView) findViewById(R.id.txtbiayaswdkllj);
+        admt=(TextView) findViewById(R.id.txtadmtn);
         adms = (TextView) findViewById(R.id.txtadmst);
 
 

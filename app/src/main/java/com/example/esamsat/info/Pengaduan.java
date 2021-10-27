@@ -19,6 +19,7 @@ public class Pengaduan extends AppCompatActivity {
         setContentView(R.layout.activity_pengaduan);
 
         webView= (WebView)findViewById(R.id.webView);
+
         websettings= webView.getSettings();
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://dpkd.sumbarprov.go.id/complain-handling.htmlhttps://dpkd.sumbarprov.go.id/complain-handling.html");

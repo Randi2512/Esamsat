@@ -15,7 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="30dp"
+
+        android:layout_marginTop="10dp"
         android:outlineAmbientShadowColor="@color/black"
         android:orientation="vertical">
 
