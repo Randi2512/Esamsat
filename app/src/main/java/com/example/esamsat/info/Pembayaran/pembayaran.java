@@ -48,7 +48,7 @@ public class pembayaran {
     public boolean isVisibility() {
         return visibility;
     }
-
+    
     public void setVisibility(boolean visibility) {
         this.visibility = visibility;
     }

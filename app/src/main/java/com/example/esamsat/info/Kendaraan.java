@@ -15,4 +15,5 @@ public class Kendaraan {
     public String sanksiSwdkllj;
     public String aDMTnkb;
     public String aDMStnk;
+    public String tOtal;
 }

@@ -33,7 +33,7 @@ public class AdapterSToday extends RecyclerView.Adapter<AdapterSToday.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.kabupaten.setText(arrayList.get(position).getKabupaten());
+        holder.nama_uptd.setText(arrayList.get(position).getNama_uptd());
         holder.kecamatan.setText(arrayList.get(position).getKecamatan());
         holder.tanggal.setText(arrayList.get(position).getTanggal());
         holder.jadwal.setText(arrayList.get(position).getJadwal());
@@ -48,11 +48,11 @@ public class AdapterSToday extends RecyclerView.Adapter<AdapterSToday.MyViewHold
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-       TextView  kabupaten,kecamatan,  jadwal ,tanggal,lokasi;
+       TextView  nama_uptd,kecamatan,  jadwal ,tanggal,lokasi;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            kabupaten =itemView.findViewById(R.id.NamaKota);
+            nama_uptd =itemView.findViewById(R.id.NamaKota);
             kecamatan = itemView.findViewById(R.id.txtKecamatan);
             jadwal = itemView.findViewById(R.id.txtJadwal);
             tanggal = itemView.findViewById(R.id.txttanggal);

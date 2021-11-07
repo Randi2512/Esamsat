@@ -46,7 +46,6 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:theme="@style/CardView.Dark"
-        android:entries="@array/data_bulan"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/view" />

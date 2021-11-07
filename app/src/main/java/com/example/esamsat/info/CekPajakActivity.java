@@ -1,8 +1,9 @@
- package com.example.esamsat.info;
+  package com.example.esamsat.info;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -35,11 +36,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 
 public class CekPajakActivity extends AppCompatActivity {
-    final String URL_SIGNIN = "https://192.168.13.51/getDataPKB.php";
+    final String URL_SIGNIN = "https://192.168.43.225/getDataPKB.php";
     Button btnproses;
     Context context;
     EditText nopol;
     int cek;
+    ProgressDialog progressDialog;
+
     String idkendaraan;
     RequestQueue requestQueue;
     ArrayList<HashMap<String, String>> list_data;
@@ -52,6 +55,7 @@ public class CekPajakActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cek_pajak);
         nopol = (EditText) findViewById(R.id.edtNopol);
         context = CekPajakActivity.this;
+        progressDialog = new ProgressDialog(CekPajakActivity.this);
         addProsesAction();
 
     }
@@ -63,14 +67,21 @@ public class CekPajakActivity extends AppCompatActivity {
         list_data = new ArrayList<HashMap<String, String>>();
 
         btnproses.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
+                progressDialog.setMessage("Silakan tunggu, cek data ke server sedang berlangsung");
+                progressDialog.show();
+
+
                 String no = nopol.getText().toString();
 
                 api = ApiService.endpoint();
 
+
                 Call<GetPkbResponse> call = api.getDataPkb(no);
                 call.enqueue(new Callback<GetPkbResponse>() {
+
                     @Override
                     public void onResponse(Call<GetPkbResponse> call, retrofit2.Response<GetPkbResponse> response) {
                         Log.d("Response::", response.body().result.toString());
@@ -79,7 +90,7 @@ public class CekPajakActivity extends AppCompatActivity {
                         intent.putExtra("NoKendaraan",response.body().result.get(0).noKendaraan );
                         intent.putExtra("TahunKendaraan",response.body().result.get(0).tahunKendaraan);
                         intent.putExtra("MerkKendaraan",response.body().result.get(0).merkKendaraan);
-                        intent.putExtra("WarnaKendaraan",response.body().result.get(0).tipeKendaraan );
+                        intent.putExtra("WarnaKendaraan",response.body().result.get(0).warnaKendaraan );
                         intent.putExtra("TglPajak",response.body().result.get(0).tglPajak);
                         intent.putExtra("TglStnk",response.body().result.get(0).tglStnk );
                         intent.putExtra("Status",response.body().result.get(0).status );
@@ -89,7 +100,7 @@ public class CekPajakActivity extends AppCompatActivity {
                         intent.putExtra("SanksiSwdkllj",response.body().result.get(0).sanksiSwdkllj );
                         intent.putExtra("ADMTnkb",response.body().result.get(0).aDMTnkb );
                         intent.putExtra("ADMStnk",response.body().result.get(0).aDMStnk);
-
+                        intent.putExtra("Total",response.body().result.get(0).tOtal);
                         startActivity(intent);
 
 
@@ -145,6 +156,7 @@ public class CekPajakActivity extends AppCompatActivity {
                         map.put("SanksiSwdkllj", json.getString("SanksiSwdkllj"));
                         map.put("ADMTnkb", json.getString("ADMTnkb"));
                         map.put("ADMStnk", json.getString("ADMStnk"));
+                        map.put("Total", json.getString("Total"));
                         list_data.add(map);
                     }
 

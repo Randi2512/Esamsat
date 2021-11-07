@@ -29,6 +29,7 @@ public class DataCekPajak extends AppCompatActivity {
         biayas = (TextView) findViewById(R.id.txtbiayaswdkllj);
         admt=(TextView) findViewById(R.id.txtadmtn);
         adms = (TextView) findViewById(R.id.txtadmst);
+        total= (TextView) findViewById(R.id.txttotal);
 
 
         Intent intentproses = getIntent();
@@ -43,9 +44,10 @@ public class DataCekPajak extends AppCompatActivity {
         sanksis.setText((String)intentproses.getSerializableExtra("SanksiSwdkllj"));
         admt.setText((String)intentproses.getSerializableExtra("ADMTnkb"));
         adms.setText((String)intentproses.getSerializableExtra("ADMStnk"));
+        total.setText((String)intentproses.getSerializableExtra("Total"));
 
     }
-    public boolean onCreateOptionMenu (Menu menu){
+    public boolean onCreateOptionMenu (Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }

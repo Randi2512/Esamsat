@@ -11,18 +11,18 @@ public class samkel_Today {
 }
 
 class Result{
-    public  String kabupaten;
+    public  String nama_uptd;
     public String kecamatan;
     public String tanggal;
     public String jadwal;
     public String lokasi;
 
-    public String getKabupaten() {
-        return kabupaten;
+    public String getNama_uptd() {
+        return nama_uptd;
     }
 
-    public void setKabupaten(String kabupaten) {
-        this.kabupaten = kabupaten;
+    public void setKabupaten(String nama_uptd) {
+        this.nama_uptd = nama_uptd;
     }
 
     public String getKecamatan() {

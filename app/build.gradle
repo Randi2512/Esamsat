@@ -59,6 +59,7 @@ dependencies {
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     implementation 'com.nineoldandroids:library:2.4.0'
     implementation 'com.leo.simplearcloader:simplearcloader:1.0.+'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
 
 
 

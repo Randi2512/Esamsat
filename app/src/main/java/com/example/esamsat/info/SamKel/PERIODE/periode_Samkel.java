@@ -28,4 +28,5 @@ class Result{
     public void setBulan(String bulan) {
         this.bulan = bulan;
     }
+
 }

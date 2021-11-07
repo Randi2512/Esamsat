@@ -100,6 +100,7 @@ private Api api;
                 adapterSToday.setData(response.body().result);
                 recyclerView.setAdapter(adapterSToday);
                 adapterSToday.notifyDataSetChanged();
+
             }
 
             @Override
