@@ -9,6 +9,7 @@
     android:id="@+id/cardview"
     android:onClick="onClick"
     app:cardElevation="2dp"
+   app:cardCornerRadius="8dp"
     app:cardUseCompatPadding="true"
     >
 
@@ -17,8 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-
-        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:outlineAmbientShadowColor="@color/black"
         android:orientation="vertical">
 
@@ -39,6 +40,7 @@
             android:text="Bukittinggi"
             android:textAppearance="@style/Base.CardView"
             android:textColor="#000"
+            android:layout_marginTop="10dp"
             android:textSize="18sp"
             />
 

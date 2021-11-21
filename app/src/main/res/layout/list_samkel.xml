@@ -7,6 +7,7 @@
     android:layout_marginRight="7dp"
     android:layout_marginLeft="7dp"
     app:cardElevation="2dp"
+    app:cardCornerRadius="6dp"
     app:cardUseCompatPadding="true"
     >
 
@@ -46,12 +47,11 @@
 
             <TextView
                 android:id="@+id/txtKecamatan"
-                android:layout_width="284dp"
-
+                android:layout_width="220dp"
                 android:gravity="left"
                 android:padding="2dip"
-                android:textColor="#000"
-                android:text="Padang Barat" />
+                android:text="Padang Barat"
+                android:textColor="#000" />
         </TableRow>
         <TableRow
             android:layout_marginTop="5dp"
@@ -70,6 +70,7 @@
                 android:id="@+id/txttanggal"
                 android:text="05-10-2021"
                 android:gravity="left"
+                android:layout_width="120dp"
                 android:textColor="@color/black"
                 android:padding="2dip" />
         </TableRow>
@@ -88,6 +89,7 @@
                 android:textColor="@color/black"
                 android:id="@+id/txtJadwal"
                 android:text="08:00:00"
+                android:layout_width="120dp"
                 android:gravity="left"
                 android:padding="2dip" />
         </TableRow>
@@ -100,12 +102,14 @@
                 android:text="Lokasi                  :"
                 android:textColor="@color/black"
                 android:typeface="serif"/>
+
             <TextView
                 android:id="@+id/txtLokasi"
-                android:textColor="@color/black"
-                android:text="Cafe UJ BP Kuranji"
+                android:layout_width="220dp"
                 android:gravity="left"
-                android:padding="2dip" />
+                android:padding="2dip"
+                android:text="Cafe UJ BP Kuranji"
+                android:textColor="@color/black" />
         </TableRow>
         </TableLayout>
 

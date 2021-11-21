@@ -1,4 +1,4 @@
-package com.example.esamsat.info;
+package com.example.esamsat.info.Pengaduan;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.webkit.WebSettings;
@@ -22,6 +22,6 @@ public class Pengaduan extends AppCompatActivity {
 
         websettings= webView.getSettings();
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://dpkd.sumbarprov.go.id/complain-handling.html");
+        webView.loadUrl("https://dpkd.sumbarprov.go.id/info-jadwal-samkel.html");
     }
 }

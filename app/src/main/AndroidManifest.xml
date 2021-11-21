@@ -18,13 +18,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Gaji"></activity>
         <activity android:name=".Complain.Complain" />
         <activity android:name=".info.SamKel.PERIODE.PeriodeBulan" />
         <activity android:name=".ui.MONITOR.Monitoring" />
-        <activity android:name=".info.SamKel.PERIODE.Periode" />
         <activity android:name=".ui.SamkelToday.SamkelToday" />
-        <activity android:name=".info.DataCekPajak" />
+        <activity android:name=".CekPajak.DataCekPajak" />
         <activity android:name=".TentangAplikasi.Panduan" />
         <activity android:name=".TentangAplikasi.LayananSamsat" />
         <activity
@@ -34,10 +32,7 @@
             android:name=".info.Pembayaran.PembayaranActivity"
             android:label="Cara Pembayaran" />
         <activity android:name=".ui.InfoActivity" />
-        <activity android:name=".info.Peraturan.PdfPeraturan" />
-        <activity android:name=".info.Peraturan.DetailPeraturan" />
-        <activity android:name=".info.Peraturan.PeraturanPajak" />
-        <activity android:name=".info.PengaduanMasyarakat" />
+        <activity android:name=".info.Pengaduan.PengaduanMasyarakat" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -67,13 +62,13 @@
             android:name=".info.SamKel.lokasi_samkel"
             android:label="Lokasi Samsat Keliling" />
         <activity
-            android:name=".info.Pengaduan"
+            android:name=".info.Pengaduan.Pengaduan"
             android:label="Pengaduan" />
         <activity
             android:name=".info.SamKel.UPTD.SamsatKeliling"
             android:label="Samsat Keliling" />
         <activity
-            android:name=".info.CekPajakActivity"
+            android:name=".CekPajak.CekPajakActivity"
             android:label="Cek Pajak Kendraan" />
         <activity android:name=".SplashScreen">
             <intent-filter>

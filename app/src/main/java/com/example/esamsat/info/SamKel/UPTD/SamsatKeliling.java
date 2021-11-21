@@ -4,17 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import com.example.esamsat.R;
 import com.example.esamsat.api.Api;
 import com.example.esamsat.api.ApiService;
-import com.example.esamsat.info.SamKel.PERIODE.Periode;
-import com.example.esamsat.info.SamKel.PERIODE.PeriodeBulan;
 
 import java.util.ArrayList;
 
@@ -64,14 +60,6 @@ public class SamsatKeliling extends AppCompatActivity {
                 Toast.makeText(SamsatKeliling.this, "Error\n" + t.toString(), Toast.LENGTH_LONG).show();
             }
         });
-
-
-
     }
 
-
-    public void onClick(View view) {
-        Intent intent = new Intent(SamsatKeliling.this, PeriodeBulan.class);
-        startActivity(intent);
-    }
 }

@@ -1,4 +1,6 @@
-package com.example.esamsat.info;
+package com.example.esamsat.CekPajak;
+
+import com.example.esamsat.CekPajak.Kendaraan;
 
 import java.util.ArrayList;
 

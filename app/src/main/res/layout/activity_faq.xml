@@ -20,7 +20,7 @@
        android:layout_below="@id/head"
        android:gravity="center"
        android:text="FAQ \n (Frequently Asked Questions)"
-       android:fontFamily="sans-serif"       android:textColor="#000"
+       android:fontFamily="@font/caviardreamsbold"     android:textColor="#000"
        android:textSize="20sp"
        android:id="@+id/txt"
        />

@@ -23,10 +23,10 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/head"
         android:text="Layanan Jadwal Samsat Keliling"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/caviardreamsbold"
         android:textColor="#000"
         android:ellipsize="marquee"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:id="@+id/txt"
         />
     <View

@@ -64,7 +64,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public static final String LNG = "lng";
 
 
-    private String url = "http://192.168.43.225/Esamsat/Marker.php";
+    private String url = "http://192.168.13.241/Esamsat/Marker.php";
 
     String tag_json_obj = "json_obj_req";
 

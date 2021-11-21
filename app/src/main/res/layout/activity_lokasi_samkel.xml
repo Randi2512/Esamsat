@@ -24,7 +24,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/head"
         android:text="Jadwal Samkel Per Bulan"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/blackjack"
         android:textColor="#000"
         android:textSize="20sp"
         android:id="@+id/txt"

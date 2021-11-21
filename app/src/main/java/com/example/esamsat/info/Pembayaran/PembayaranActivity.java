@@ -5,19 +5,25 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.esamsat.R;
+import com.example.esamsat.api.Api;
+import com.example.esamsat.api.ApiService;
 
 import java.util.ArrayList;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class PembayaranActivity extends AppCompatActivity {
     RecyclerView recyclerView;
+    private Api apiInterface;
     ArrayList<pembayaran> pembayaranArrayList;
     AdapterPembayaran adapterPembayaran;
-    String[] heading;
-    String[] detail;
-    int[] ImageResourceId;
 
 
 
@@ -31,62 +37,31 @@ public class PembayaranActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.rv_pembayaran);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-        pembayaranArrayList = new ArrayList<>();
 
 
 
-        heading = new String[]{
-                "BANK BNI",
-                "BANK MANDIRI",
-                "BANK BRI",
-                 "BANK PERMATA",
-                "BANK BCA",
-                "CIMB NIAGA",
-                "BANK NAGARI"
-
-
-        };
-
-        detail = new String[]{
-                getString(R.string.BNI),
-                getString(R.string.mandiri),
-                getString(R.string.BRI),
-                getString(R.string.Permata),
-                getString(R.string.BCA),
-                getString(R.string.Cimb),
-                getString(R.string.nagari)
-
-
-
-        };
-
-        ImageResourceId = new int[]{
-                R.drawable.bni,
-                R.drawable.mandiri,
-                R.drawable.bri,
-                R.drawable.permata,
-                R.drawable.bca,
-                R.drawable.cimb,
-                R.drawable.banknagari
-
-
-        };
-
-        getData();
-
+        fetchData("cara_pembayaran","");
     }
 
-    private void getData() {
+    private void fetchData(String cara_pembayaran, String key) {
+        adapterPembayaran = new AdapterPembayaran(new ArrayList<>());
+        apiInterface = ApiService.endpoint();
+        Call<pembayaran> call = apiInterface.getcara_pembayaran();
+        call.enqueue(new Callback<pembayaran>() {
+            @Override
+            public void onResponse(Call<pembayaran> call, Response<pembayaran> response) {
+                Log.d("respons:", String.valueOf(response.body()));
+                adapterPembayaran.setData(response.body().result);
+                recyclerView.setAdapter(adapterPembayaran);
+                adapterPembayaran.notifyDataSetChanged();
+            }
 
-        for (int i = 0; i < heading.length; i++) {
-            pembayaran pembayaran = new pembayaran(heading[i], detail[i], ImageResourceId[i]);
-            pembayaranArrayList.add(pembayaran);
+            @Override
+            public void onFailure(Call<pembayaran> call, Throwable t) {
+                Log.d("response::", t.toString());
+                Toast.makeText(PembayaranActivity.this, "Error\n" + t.toString(), Toast.LENGTH_LONG).show();
 
-        }
-        adapterPembayaran = new AdapterPembayaran(this, pembayaranArrayList);
-        recyclerView.setAdapter(adapterPembayaran);
-        adapterPembayaran.notifyDataChanged();
-
+            }
+        });
     }
-
 }

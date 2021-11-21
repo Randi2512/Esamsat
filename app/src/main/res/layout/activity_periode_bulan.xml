@@ -50,6 +50,14 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/view" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/spinner1"
+        tools:listitem="@layout/list_samkel"
+        android:id="@+id/rv_datasamkel" />
+
 
 
 

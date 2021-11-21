@@ -14,15 +14,14 @@ import androidx.cardview.widget.CardView;
 
 import com.example.esamsat.R;
 
-import com.example.esamsat.info.CekPajakActivity;
+import com.example.esamsat.CekPajak.CekPajakActivity;
 import com.example.esamsat.info.Pembayaran.PembayaranActivity;
-import com.example.esamsat.info.Pengaduan;
+import com.example.esamsat.info.Pengaduan.Pengaduan;
 import com.example.esamsat.info.Peraturan.PeraturanpajakActivity;
 import com.example.esamsat.info.SamKel.UPTD.SamsatKeliling;
 import com.example.esamsat.info.faq.faq;
 import com.example.esamsat.ui.InfoActivity;
 import com.example.esamsat.ui.GIS.MapsActivity;
-import com.example.esamsat.ui.MONITOR.Monitoring;
 import com.example.esamsat.ui.SamkelToday.SamkelToday;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
@@ -42,6 +41,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         List<Integer> images=new ArrayList<>();
+        images.add(R.drawable.beacukai);
         images.add(R.drawable.denda);
         images.add(R.drawable.slide1);
         images.add(R.drawable.slide2);

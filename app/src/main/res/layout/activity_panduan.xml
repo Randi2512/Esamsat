@@ -34,6 +34,7 @@
         android:layout_centerHorizontal="true"
         android:text="Panduan Aplikasi"
         android:textStyle="bold"
+        android:fontFamily="@font/blackjack"
         android:textColor="@color/black"
         android:textSize="25sp" />
     <View

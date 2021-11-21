@@ -2,6 +2,7 @@ package com.example.esamsat.TentangAplikasi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.example.esamsat.R;
@@ -16,6 +17,7 @@ public class Panduan extends AppCompatActivity {
 
         PDFView pdfView = (PDFView) findViewById(R.id.pdfView);
 
-        pdfView.fromAsset("manual.pdf").load();
+        pdfView.fromAsset("manualbook.pdf").load();
+        //pdfView.fromUri(Uri.parse("http://192.168.13.241/Esamsat/bukupanduan/panduan.pdf")).load();
     }
 }

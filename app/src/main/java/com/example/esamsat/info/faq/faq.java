@@ -106,7 +106,7 @@ public class faq extends Activity {
         listDataHeader.add("Apa saja Dokumen yang harus dilengkapi untuk melakukan BBN Sepeda Motor ?");
         listDataHeader.add("Bisakah membayar pajak motor tanpa KTP pemilik ?");
         listDataHeader.add("Berapa biaya mutasi motor antar kota, dalam 1 propinsi yaitu, dari kota padang ke kota Solok? Dan berapa biaya balik nama untuk motor");
-        listDataHeader.add("Bagaimana cara memblokir STNK kendaraan yang telah di jual  ?");
+        listDataHeader.add("Apa saja syarat pembayaran pajak secara online ?");
         listDataHeader.add("Bagaimana cara cabut berkas dan syaratnya apa saja");
         listDataHeader.add("Bagaimana cara mutasi dari Jateng ke Padang (Mutasi Antar Provinsi) ?");
         listDataHeader.add("saya mau blokir pajak mobil saya yang sudah terjual. Bagaimana prosedurnya Bapak/ Ibu admin. Apakah cara blokirnya bisa secara online. Mohon penjelasannya Bapak/ Ibu admin. Terima Kasih");
@@ -140,7 +140,14 @@ public class faq extends Activity {
                 "5. Setelah terbit stnk proses selesai Terima kasih");
 
         List<String> faq6 = new ArrayList<String>();
-        faq6.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");
+        faq6.add("Berikut ini adalah beberapa poin penting yang harus disiapkan sebagai syarat bayar pajak motor secara online dan offline.\n" +
+                "\n" +
+                "1. KTP asli dan fotokopi.\n" +
+                "2. STNK asli dan fotokopi.\n" +
+                "3. BPKB asli dan fotokopi.\n" +
+                "4. Rekening Tabungan.\n" +
+                "5. Kartu ATM/layanan internet banking.\n" +
+                "6. Aplikasi e-Samsat /Akses melalui situs yang ditentukan.");
 
         List<String> faq7 = new ArrayList<String>();
         faq7.add("Caranya dengan melapor ke skskskskskns  njsjdjdj ke skskskskskns  njsjdjdj  ke skskskskskns  njsjdjdj");

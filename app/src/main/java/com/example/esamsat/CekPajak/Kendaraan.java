@@ -1,4 +1,4 @@
-package com.example.esamsat.info;
+package com.example.esamsat.CekPajak;
 
 public class Kendaraan {
     public String noKendaraan;

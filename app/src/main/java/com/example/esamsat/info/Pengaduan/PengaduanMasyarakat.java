@@ -1,4 +1,4 @@
-package com.example.esamsat.info;
+package com.example.esamsat.info.Pengaduan;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".info.PengaduanMasyarakat">
+        tools:context=".info.Pengaduan.PengaduanMasyarakat">
         <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"

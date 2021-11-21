@@ -46,6 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="E-Samsat Information"
+                android:fontFamily="@font/caviardreamsbold"
                 android:textColor="#000"
                 android:textSize="25sp" />
 
@@ -58,9 +59,10 @@
                 android:id="@+id/sliding_text_marquee"
                 android:singleLine="true"
                 android:textColor="	#1E90FF"
+                android:fontFamily="@font/blackjack"
                 android:ellipsize="marquee"
                 android:text="Selamat Datang di Aplikasi Mobile E-Samsat Sumbar "
-                android:textSize="19sp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
         </RelativeLayout>
 

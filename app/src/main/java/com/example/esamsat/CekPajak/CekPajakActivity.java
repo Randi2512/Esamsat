@@ -1,4 +1,4 @@
-  package com.example.esamsat.info;
+  package com.example.esamsat.CekPajak;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +19,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -36,7 +35,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 
 public class CekPajakActivity extends AppCompatActivity {
-    final String URL_SIGNIN = "https://192.168.43.225/getDataPKB.php";
+    final String URL_SIGNIN = "https://192.168.13.241/getDataPKB.php";
     Button btnproses;
     Context context;
     EditText nopol;
@@ -86,7 +85,7 @@ public class CekPajakActivity extends AppCompatActivity {
                     public void onResponse(Call<GetPkbResponse> call, retrofit2.Response<GetPkbResponse> response) {
                         Log.d("Response::", response.body().result.toString());
 
-                        Intent intent = new Intent(getApplicationContext(),DataCekPajak.class);
+                        Intent intent = new Intent(getApplicationContext(), DataCekPajak.class);
                         intent.putExtra("NoKendaraan",response.body().result.get(0).noKendaraan );
                         intent.putExtra("TahunKendaraan",response.body().result.get(0).tahunKendaraan);
                         intent.putExtra("MerkKendaraan",response.body().result.get(0).merkKendaraan);
@@ -102,6 +101,7 @@ public class CekPajakActivity extends AppCompatActivity {
                         intent.putExtra("ADMStnk",response.body().result.get(0).aDMStnk);
                         intent.putExtra("Total",response.body().result.get(0).tOtal);
                         startActivity(intent);
+
 
 
 

@@ -1,4 +1,4 @@
-package com.example.esamsat.info;
+package com.example.esamsat.CekPajak;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.ui.AppBarConfiguration;
