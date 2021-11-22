@@ -26,7 +26,7 @@
         android:fontFamily="@font/caviardreamsbold"
         android:textColor="#000"
         android:ellipsize="marquee"
-        android:textSize="23sp"
+        android:textSize="20sp"
         android:id="@+id/txt"
         />
     <View

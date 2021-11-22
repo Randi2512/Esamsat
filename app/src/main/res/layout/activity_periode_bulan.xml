@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".info.SamKel.PERIODE.Periode">
+    tools:context=".info.SamKel.PERIODE.PeriodeBulan">
 
 
     <ImageView
@@ -23,7 +23,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/head"
         android:text="Periode (Bulan)"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/caviardreamsbold"
         android:textColor="#000"
         android:textSize="20sp"
         android:id="@+id/txt"

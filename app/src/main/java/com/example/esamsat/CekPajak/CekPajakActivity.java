@@ -35,7 +35,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 
 public class CekPajakActivity extends AppCompatActivity {
-    final String URL_SIGNIN = "https://192.168.13.241/getDataPKB.php";
+    final String URL_SIGNIN = "https://192.168.13.141/getDataPKB.php";
     Button btnproses;
     Context context;
     EditText nopol;

@@ -46,8 +46,6 @@ public class PeriodeBulan extends AppCompatActivity {
 
 
 
-
-
         fetchData("samkel","");
 
         spinBulan();

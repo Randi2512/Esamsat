@@ -26,7 +26,7 @@
         android:text="Jadwal Samsat Keliling Hari ini"
         android:fontFamily="@font/caviardreamsbold"
         android:textColor="#000"
-        android:textSize="23sp"
+        android:textSize="20sp"
         android:id="@+id/txt"
         />
     <View
