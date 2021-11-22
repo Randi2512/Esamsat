@@ -26,12 +26,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-       View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_jadwal,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_jadwal, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, int position) {
         holder.nama_uptd.setText(arrayList.get(position).getNama_uptd());
         holder.alamat.setText(arrayList.get(position).getAlamat());
         holder.no_telp.setText(arrayList.get(position).getNo_telp());
@@ -39,8 +39,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), PeriodeBulan.class);
-                  intent.putExtra("nama", arrayList.get(position).getNama_uptd());
-                  view.getContext().startActivity(intent);
+                intent.putExtra("nama", arrayList.get(position).getNama_uptd());
+                intent.putExtra("notelp", arrayList.get(position).getNo_telp());
+                view.getContext().startActivity(intent);
             }
         });
     }
@@ -50,24 +51,23 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         return arrayList.size();
     }
 
-
-
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-       TextView nama_uptd,alamat,no_telp;
-       CardView cardView;
+        TextView nama_uptd, alamat, no_telp;
+        CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             nama_uptd = itemView.findViewById(R.id.txtNamaUPTD);
-            alamat= itemView.findViewById(R.id.txtLokasiUPTD);
-            no_telp=itemView.findViewById(R.id.txtNomor);
-            cardView= itemView.findViewById(R.id.cardview);
-
+            alamat = itemView.findViewById(R.id.txtLokasiUPTD);
+            no_telp = itemView.findViewById(R.id.txtNomor);
+            cardView = itemView.findViewById(R.id.cardview);
 
 
         }
     }
-    public void setData(ArrayList<Result> newlist)
-    { this.arrayList =newlist;}
+
+    public void setData(ArrayList<Result> newlist) {
+        this.arrayList = newlist;
+    }
 }

@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19074074074074074" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/drawable/bg_time.xml" value="0.19074074074074074" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/drawable/color_state.xml" value="0.19074074074074074" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/drawable/head.xml" value="0.19074074074074074" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19074074074074074" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/drawable/ikon_menu.xml" value="0.19074074074074074" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/drawable/spinner_outline.xml" value="0.19074074074074074" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_cek_pajak.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_complain.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_data_cek_pajak.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_faq.xml" value="0.264" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_gaji.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_home.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_info.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_layanan_samsat.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_lokasi_samkel.xml" value="0.264" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_main.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_maps.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_monitoring.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_panduan.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_pembayaran.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_pengaduan.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_pengaduan_masyarakat.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_peraturan.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_peraturan_pajak.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_peraturanpajak.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_periode.xml" value="0.2" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_periode_bulan.xml" value="0.264" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_samkel_today.xml" value="0.264" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_samsat_keliling.xml" value="0.152" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/activity_splash_screen.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/layout_child.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/layout_parent.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/list_grupfaq.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/list_itemfaq.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/list_itempembayaran.xml" value="0.12335359675785208" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/list_jadwal.xml" value="0.264" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/list_samkel.xml" value="0.264" />
+        <entry key="..\:/App/Android/Esamsat/app/src/main/res/layout/row_item.xml" value="0.25052083333333336" />
+      </map>
+    </option>
+  </component>
   <component name="EntryPointsManager">
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="retrofit2.http.GET" />

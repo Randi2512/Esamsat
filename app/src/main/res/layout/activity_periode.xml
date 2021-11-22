@@ -3,53 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".info.SamKel.PERIODE.Periode">
-
+    android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/head"
         android:layout_width="424dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/banner3"
-        android:id="@+id/head"
-        />
+        android:background="@drawable/banner3" />
 
     <TextView
+        android:id="@+id/txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_marginTop="25dp"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/head"
-        android:text="Periode (Bulan)"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
         android:fontFamily="sans-serif-black"
+        android:text="Periode (Bulan)"
         android:textColor="#000"
         android:textSize="20sp"
-        android:id="@+id/txt"
-        />
+        android:textStyle="bold" />
+
     <View
+        android:id="@+id/view"
         android:layout_width="450dp"
         android:layout_height="2dp"
-        android:layout_gravity="center"
         android:layout_below="@id/txt"
+        android:layout_gravity="center"
         android:layout_marginTop="12dp"
         android:background="@color/black"
-        android:id="@+id/view"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt" />
 
     <ScrollView
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/view">
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_data1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
-            tools:listitem="@layout/list_periode"
-            android:id="@+id/rv_data1" />
+            tools:listitem="@layout/list_periode" />
     </ScrollView>
 
 

@@ -17,7 +17,7 @@ public interface Api {
     @GET("apiperaturan.php")
     Call<Peraturan> getPeraturan();
 
-    @GET ("Api_pembayaran.php")
+    @GET("Api_pembayaran.php")
     Call<pembayaran> getcara_pembayaran();
 
     @GET("getdatapkb.php")
@@ -26,13 +26,15 @@ public interface Api {
     );
 
 
-
     @GET("periodesamkel.php")
-    Call<periode_Samkel> getperiode_Samkel();
+    Call<periode_Samkel> getperiode_Samkel(
+            @Query("nama_uptd") String nama_uptd,
+            @Query("bulan") String bulan
+    );
 
     @GET("getDataUPTD.php")
     Call<Uptd> getUptd();
 
-    @GET ("getLokasiSamkel.php")
+    @GET("getLokasiSamkel.php")
     Call<samkel_Today> getsamkel_Today();
 }

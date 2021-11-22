@@ -5,12 +5,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.esamsat.R;
@@ -28,11 +32,14 @@ import retrofit2.Response;
 public class PeriodeBulan extends AppCompatActivity {
     Spinner spin1;
     Intent i;
-    String nama_uptd;
+    String nama_uptd, telp;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private AdapterSBulanan adapterSBulanan;
     private Api api;
+    LinearLayout lnNotFound;
+    TextView nama, notelp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,34 +47,49 @@ public class PeriodeBulan extends AppCompatActivity {
         setContentView(R.layout.activity_periode_bulan);
         spin1 = (Spinner) findViewById(R.id.spinner1);
         recyclerView = findViewById(R.id.rv_datasamkel);
+        lnNotFound = findViewById(R.id.lnNotFound);
+        nama = findViewById(R.id.txt);
+        notelp = findViewById(R.id.tvNotelp);
+
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
 
-
-
-        fetchData("samkel","");
-
         spinBulan();
         spinBulanSelected();
-        Bulan();
         i = getIntent();
         nama_uptd = i.getStringExtra("nama");
+        telp = i.getStringExtra("notelp");
 
-
+        nama.setText(nama_uptd);
+        notelp.setText(telp);
+        notelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToPhone();
+            }
+        });
 
     }
 
-    private void fetchData(String type, String key) {
+    private void goToPhone() {
+        telp = telp.replace(" ", "").replace("-", "");
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", telp, null));
+        startActivity(intent);
+    }
 
-        adapterSBulanan = new AdapterSBulanan() ;
+    private void fetchData(String nama, String bulan) {
+
         api = ApiService.endpoint();
-        Call<periode_Samkel> call = api.getperiode_Samkel();
+        Call<periode_Samkel> call = api.getperiode_Samkel(nama, bulan);
         call.enqueue(new Callback<periode_Samkel>() {
             @Override
             public void onResponse(Call<periode_Samkel> call, Response<periode_Samkel> response) {
-                Log.d("respons:", String.valueOf(response.body()));
+                Log.d("respons:", String.valueOf(response.body().result));
+                lnNotFound.setVisibility(View.GONE);
+                recyclerView.setVisibility(View.VISIBLE);
 
+                adapterSBulanan = new AdapterSBulanan() ;
                 adapterSBulanan.setData(response.body().result);
                 recyclerView.setAdapter(adapterSBulanan);
 
@@ -76,14 +98,11 @@ public class PeriodeBulan extends AppCompatActivity {
             @Override
             public void onFailure(Call<periode_Samkel> call, Throwable t) {
                 Log.d("response::", t.toString());
-                Toast.makeText(PeriodeBulan.this, "Tidak Ada SamKel Bulan ini ini", Toast.LENGTH_LONG).show();
-
+                lnNotFound.setVisibility(View.VISIBLE);
+                recyclerView.setVisibility(View.GONE);
             }
         });
-
-
     }
-
 
     private void spinBulan() {
         spin1 = (Spinner) findViewById(R.id.spinner1);
@@ -100,9 +119,9 @@ public class PeriodeBulan extends AppCompatActivity {
         ListStts.add("10. OKTOBER");
         ListStts.add("11. NOVEMBER");
         ListStts.add("12. DESEMBER");
-        ArrayAdapter<String> Status = new ArrayAdapter<String>(PeriodeBulan.this, android.R.layout.simple_spinner_item, ListStts);
-        Status.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spin1.setAdapter(Status);
+        ArrayAdapter<String> status = new ArrayAdapter<String>(PeriodeBulan.this, android.R.layout.simple_spinner_item, ListStts);
+        status.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin1.setAdapter(status);
     }
 
 
@@ -114,9 +133,7 @@ public class PeriodeBulan extends AppCompatActivity {
 
                 String bulan = spin1.getSelectedItem().toString();
                 String angkaBulan  = bulan.split(" " )[0].replace(".","");
-                Api api = ApiService.endpoint();
-
-
+                fetchData(nama_uptd, angkaBulan);
             }
 
             @Override
@@ -124,8 +141,6 @@ public class PeriodeBulan extends AppCompatActivity {
 
             }
         });
-    }
-    private void Bulan() {
     }
 
 

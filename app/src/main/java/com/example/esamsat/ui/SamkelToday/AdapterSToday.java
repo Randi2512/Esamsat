@@ -52,7 +52,6 @@ public class AdapterSToday extends RecyclerView.Adapter<AdapterSToday.MyViewHold
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            nama_uptd =itemView.findViewById(R.id.NamaKota);
             kecamatan = itemView.findViewById(R.id.txtKecamatan);
             jadwal = itemView.findViewById(R.id.txtJadwal);
             tanggal = itemView.findViewById(R.id.txttanggal);

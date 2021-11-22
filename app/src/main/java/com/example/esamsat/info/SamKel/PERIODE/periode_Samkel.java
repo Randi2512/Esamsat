@@ -4,7 +4,7 @@ package com.example.esamsat.info.SamKel.PERIODE;
 
 import java.util.ArrayList;
 
-public class periode_Samkel extends ArrayList<Result> {
+public class periode_Samkel{
 
     public ArrayList<Result> result;
 }

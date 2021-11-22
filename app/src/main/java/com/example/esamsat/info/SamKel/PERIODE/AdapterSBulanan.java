@@ -12,23 +12,19 @@ import com.example.esamsat.R;
 
 import java.util.ArrayList;
 
-public class AdapterSBulanan extends RecyclerView.Adapter<AdapterSBulanan.MyViewHolder>{
-   private ArrayList<Result> arrayList;
+public class AdapterSBulanan extends RecyclerView.Adapter<AdapterSBulanan.MyViewHolder> {
 
+    private ArrayList<Result> arrayList;
 
-
-
-    @NonNull
     @Override
-    public AdapterSBulanan.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_samkel,parent,false);
+    public AdapterSBulanan.MyViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_samkel, parent, false);
         return new MyViewHolder(view);
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AdapterSBulanan.MyViewHolder holder, int position) {
-        holder.nama_uptd.setText((arrayList.get(position).getNama_uptd()));
+    public void onBindViewHolder(AdapterSBulanan.MyViewHolder holder, int position) {
         holder.kecamatan.setText(arrayList.get(position).getKecamatan());
         holder.tanggal.setText(arrayList.get(position).getTanggal());
         holder.jadwal.setText(arrayList.get(position).getJadwal());
@@ -41,11 +37,11 @@ public class AdapterSBulanan extends RecyclerView.Adapter<AdapterSBulanan.MyView
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView nama_uptd,kecamatan,  jadwal ,tanggal,lokasi;
+        TextView nama_uptd, kecamatan, jadwal, tanggal, lokasi;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            nama_uptd =itemView.findViewById(R.id.NamaKota);
             kecamatan = itemView.findViewById(R.id.txtKecamatan);
             jadwal = itemView.findViewById(R.id.txtJadwal);
             tanggal = itemView.findViewById(R.id.txttanggal);
@@ -54,8 +50,9 @@ public class AdapterSBulanan extends RecyclerView.Adapter<AdapterSBulanan.MyView
     }
 
 
-    public void setData(ArrayList<Result> newlist)
-    { this.arrayList =newlist;
-        notifyDataSetChanged();}
+    public void setData(ArrayList<Result> newlist) {
+        arrayList = newlist;
+        notifyDataSetChanged();
+    }
 
 }

@@ -6,10 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".info.SamKel.lokasi_samkel">
 
-
-
     <ImageView
-        android:layout_width="424dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/banner3"
@@ -24,13 +22,13 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/head"
         android:text="Jadwal Samkel Per Bulan"
-        android:fontFamily="@font/blackjack"
+        android:fontFamily="@font/caviardreamsbold"
         android:textColor="#000"
         android:textSize="20sp"
         android:id="@+id/txt"
         />
     <View
-        android:layout_width="450dp"
+        android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_gravity="center"
         android:layout_below="@id/txt"
