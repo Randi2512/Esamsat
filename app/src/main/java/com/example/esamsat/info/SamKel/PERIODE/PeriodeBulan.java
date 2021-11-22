@@ -60,7 +60,7 @@ public class PeriodeBulan extends AppCompatActivity {
 
     private void fetchData(String type, String key) {
 
-        adapterSBulanan = new AdapterSBulanan(new ArrayList<>()) ;
+        adapterSBulanan = new AdapterSBulanan() ;
         api = ApiService.endpoint();
         Call<periode_Samkel> call = api.getperiode_Samkel();
         call.enqueue(new Callback<periode_Samkel>() {
@@ -70,7 +70,7 @@ public class PeriodeBulan extends AppCompatActivity {
 
                 adapterSBulanan.setData(response.body().result);
                 recyclerView.setAdapter(adapterSBulanan);
-                adapterSBulanan.notifyDataSetChanged();
+
             }
 
             @Override
